@@ -11,10 +11,15 @@
             >
 
         <ImageView
-                android:layout_width="48dp"
+                android:id="@+id/tasaLlegadasImage"
+                android:layout_width="32dp"
                 android:layout_height="match_parent"
                 android:src="@drawable/ic_action_person"
-                android:scaleType="center"
+                android:scaleType="centerInside"
+
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginRight="4dp"
                 />
 
         <TextView
@@ -41,12 +46,18 @@
     <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="48dp"
+
             >
 
         <ImageView
-                android:layout_width="48dp"
+                android:id="@+id/tasaServicioImage"
+                android:layout_width="32dp"
                 android:layout_height="match_parent"
                 android:src="@drawable/ic_action_person"
+                android:scaleType="centerInside"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginRight="4dp"
                 />
 
         <TextView
@@ -76,9 +87,14 @@
             >
 
         <ImageView
-                android:layout_width="48dp"
+                android:id="@+id/numeroCanalesServicioImage"
+                android:layout_width="32dp"
                 android:layout_height="match_parent"
                 android:src="@drawable/ic_action_network_wifi"
+                android:scaleType="centerInside"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginRight="4dp"
                 />
 
         <TextView
@@ -108,10 +124,14 @@
             >
 
         <ImageView
-                android:layout_width="48dp"
+                android:id="@+id/tamanoPoblacionImage"
+                android:layout_width="32dp"
                 android:layout_height="match_parent"
                 android:src="@drawable/ic_action_network_wifi"
-                android:scaleType="center"
+                android:scaleType="centerInside"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginRight="4dp"
                 />
 
         <TextView

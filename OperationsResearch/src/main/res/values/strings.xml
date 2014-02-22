@@ -15,5 +15,7 @@
     <string name="tamano_de_la_poblacion">Tamaño de la población</string>
     <string name="title_activity_input_model">Input Model Activity</string>
     <string name="hello_world">Hello world!</string>
+    <string name="calculate">Calcular</string>
+    <string name="title_activity_results">ResultsActivity</string>
 
 </resources>

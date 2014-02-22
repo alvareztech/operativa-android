@@ -1,9 +1,11 @@
 package com.danyalvarez.operationsresearch;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -20,9 +22,19 @@ public class InputModelActivity extends ActionBarActivity {
         setContentView(R.layout.activity_input_model);
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction()
-                    .add(R.id.container, new MMSCFragment())
+                    .add(R.id.container, new MMSCFragment(this))
                     .commit();
         }
+
+
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setDisplayHomeAsUpEnabled(true);
+        actionBar.setDisplayShowHomeEnabled(false);
+        actionBar.setDisplayShowTitleEnabled(true);
+        actionBar.setTitle("Modelo M/M/1");
+        actionBar.setSubtitle("Teoria de Colas");
+        actionBar.setDisplayUseLogoEnabled(false);
+
     }
 
 
@@ -40,7 +52,12 @@ public class InputModelActivity extends ActionBarActivity {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-        if (id == R.id.action_settings) {
+        if (id == R.id.action_calculate) {
+            Log.i("o", "action calculate");
+
+            Intent intent = new Intent(this, ResultsActivity.class);
+            startActivity(intent);
+
             return true;
         }
         return super.onOptionsItemSelected(item);
