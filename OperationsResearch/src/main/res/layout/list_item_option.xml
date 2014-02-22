@@ -14,6 +14,9 @@
             android:textColor="@color/text_color_primary_dark"
             android:fontFamily="sans-serif-light"
             android:textSize="@dimen/text_size_large"
+            android:layout_marginTop="4dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
             />
 
     <TextView
@@ -22,6 +25,9 @@
             android:layout_height="wrap_content"
             android:text="@string/app_name"
             android:textSize="@dimen/text_size_small"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="4dp"
             />
 
 </LinearLayout>

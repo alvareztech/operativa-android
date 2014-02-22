@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            >
+
+        <ImageView
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_action_person"
+                android:scaleType="center"
+                />
+
+        <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/tasa_de_llegadas"
+                android:gravity="center_vertical"
+                android:layout_margin="4dp"
+                />
+        
+        <EditText
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:layout_marginLeft="4dp"
+                android:inputType="numberDecimal"
+                />
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            >
+
+        <ImageView
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_action_person"
+                />
+
+        <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/tasa_de_servicio"
+                android:gravity="center_vertical"
+                android:layout_margin="4dp"
+                />
+
+        <EditText
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:layout_marginLeft="4dp"
+                android:inputType="numberDecimal"
+                />
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            >
+
+        <ImageView
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_action_network_wifi"
+                />
+
+        <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/numero_de_canales_de_servicio"
+                android:gravity="center_vertical"
+                android:layout_margin="4dp"
+                />
+
+        <EditText
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:layout_marginLeft="4dp"
+                android:inputType="number"
+                />
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            >
+
+        <ImageView
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_action_network_wifi"
+                android:scaleType="center"
+                />
+
+        <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/tamano_de_la_poblacion"
+                android:gravity="center_vertical"
+                android:layout_margin="4dp"
+                />
+
+        <EditText
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:layout_marginLeft="4dp"
+                android:inputType="number"
+                />
+
+    </LinearLayout>
+
+</LinearLayout>

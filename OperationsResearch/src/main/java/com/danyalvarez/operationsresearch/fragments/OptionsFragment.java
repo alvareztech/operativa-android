@@ -2,11 +2,14 @@ package com.danyalvarez.operationsresearch.fragments;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ListView;
+import com.danyalvarez.operationsresearch.InputModelActivity;
 import com.danyalvarez.operationsresearch.MainActivity;
 import com.danyalvarez.operationsresearch.R;
 import com.danyalvarez.operationsresearch.adapters.lists.OptionListAdapter;
@@ -35,12 +38,12 @@ public class OptionsFragment extends ListFragment {
         super.onActivityCreated(savedInstanceState);
 
         mListAdapter = new OptionListAdapter(mContext);
-        mListAdapter.addItem("Modelo M/M/1", "Población infinita, capacidad del sistema infinito, un canal de servicio");
-        mListAdapter.addItem("Modelo M/M/S", "Población infinita, capacidad del sistema infinito, S canales de servicio");
-        mListAdapter.addItem("Modelo M/M/1/C", "Población de tamaño C, capacidad del sistema infinito, un canal de servicio");
-        mListAdapter.addItem("Modelo M/M/S/C", "Población de tamaño C, capacidad del sistema infinito, S canales de servicio");
-        mListAdapter.addItem("Modelo M/M/1/K", "Población infinita, capacidad del sistema limitado a K, un canal de servicio");
-        mListAdapter.addItem("Modelo M/M/S/K", "Población infinita, capacidad del sistema limitado a K, S canales de servicio");
+        mListAdapter.addItem("M/M/1", "Población infinita, capacidad del sistema infinito, un canal de servicio");
+        mListAdapter.addItem("M/M/S", "Población infinita, capacidad del sistema infinito, S canales de servicio");
+        mListAdapter.addItem("M/M/1/C", "Población de tamaño C, capacidad del sistema infinito, un canal de servicio");
+        mListAdapter.addItem("M/M/S/C", "Población de tamaño C, capacidad del sistema infinito, S canales de servicio");
+        mListAdapter.addItem("M/M/1/K", "Población infinita, capacidad del sistema limitado a K, un canal de servicio");
+        mListAdapter.addItem("M/M/S/K", "Población infinita, capacidad del sistema limitado a K, S canales de servicio");
 
         setListAdapter(mListAdapter);
     }
@@ -49,5 +52,14 @@ public class OptionsFragment extends ListFragment {
     public void onAttach(Activity activity) {
         super.onAttach(activity);
 //        ((MainActivity) activity).onSectionAttached(getArguments().getInt(ARG_SECTION_NUMBER));
+    }
+
+
+    @Override
+    public void onListItemClick(ListView l, View v, int position, long id) {
+        super.onListItemClick(l, v, position, id);
+        if (position == 2) {
+            startActivity(new Intent(getActivity(), InputModelActivity.class));
+        }
     }
 }
