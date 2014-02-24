@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+
+    <color name="window_background">#ffffff</color>
+
     <color name="text_color_primary_dark">#FF2D55</color>
-    <color name="text_color_secondary_dark">#FF2D55</color>
+    <color name="text_color_secondary_dark">#333333</color>
+    <color name="text_color_tertiary_dark">#666666</color>
+
+    <color name="text_color_primary_light">#CCCCCC</color>
+    <color name="text_color_secondary_light">#999999</color>
+    <color name="text_color_tertiary_light">#666666</color>
 
 </resources>

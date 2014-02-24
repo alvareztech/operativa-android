@@ -6,6 +6,4 @@
              tools:context="com.danyalvarez.operationsresearch.InputModelActivity"
              tools:ignore="MergeRootFrame"
              android:padding="16dp"
-
-             android:background="#fff"
         />

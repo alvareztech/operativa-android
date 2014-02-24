@@ -7,19 +7,14 @@
 
     <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="48dp"
+            android:layout_height="@dimen/normal_size"
             >
 
         <ImageView
                 android:id="@+id/tasaLlegadasImage"
-                android:layout_width="32dp"
-                android:layout_height="match_parent"
+                style="@style/Icon.Right"
                 android:src="@drawable/ic_action_person"
-                android:scaleType="centerInside"
 
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="8dp"
-                android:layout_marginRight="4dp"
                 />
 
         <TextView

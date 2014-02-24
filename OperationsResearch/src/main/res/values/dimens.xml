@@ -12,4 +12,14 @@
     <dimen name="text_size_small">14sp</dimen>
     <dimen name="text_size_medium">18sp</dimen>
     <dimen name="text_size_large">22sp</dimen>
+
+    <!-- Standar -->
+    <dimen name="normal_size">48dp</dimen>
+    <dimen name="medium_size">72dp</dimen>
+    <dimen name="large_area">96dp</dimen>
+    <dimen name="ends_margin">16dp</dimen>
+    <dimen name="icon_margin">8dp</dimen>
+    <dimen name="list_view_margin">8dp</dimen>
+    <dimen name="view_margin">4dp</dimen>
+
 </resources>

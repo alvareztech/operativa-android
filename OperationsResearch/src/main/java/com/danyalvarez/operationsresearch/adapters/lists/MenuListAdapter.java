@@ -8,6 +8,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 import com.danyalvarez.operationsresearch.R;
+import com.danyalvarez.operationsresearch.classes.MenuItem;
 import com.danyalvarez.operationsresearch.classes.Option;
 
 import java.util.ArrayList;
@@ -19,12 +20,12 @@ public class MenuListAdapter extends BaseAdapter {
 
     private Context mContext;
     private LayoutInflater mLayoutInflater;
-    private ArrayList<Option> mData;
+    private ArrayList<MenuItem> mData;
 
     public MenuListAdapter(Context mContext) {
         this.mContext = mContext;
         this.mLayoutInflater = LayoutInflater.from(mContext);
-        this.mData = new ArrayList<Option>();
+        this.mData = new ArrayList<MenuItem>();
     }
 
     @Override
@@ -46,20 +47,20 @@ public class MenuListAdapter extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
         ViewHolder viewHolder;
         if (convertView == null) {
-            convertView = mLayoutInflater.inflate(R.layout.list_item_option, null);
+            convertView = mLayoutInflater.inflate(R.layout.list_item_menu, null);
             viewHolder =  new ViewHolder();
 
+            viewHolder.iconImage = (ImageView) convertView.findViewById(R.id.iconImage);
             viewHolder.titleText = (TextView) convertView.findViewById(R.id.titleText);
-            viewHolder.descriptionText = (TextView) convertView.findViewById(R.id.descriptionText);
 
             convertView.setTag(viewHolder);
         } else {
             viewHolder = (ViewHolder) convertView.getTag();
         }
 
-        Option option = mData.get(position);
-        viewHolder.titleText.setText(option.getTitle());
-        viewHolder.descriptionText.setText(option.getDescription());
+        MenuItem menuItem = mData.get(position);
+        viewHolder.iconImage.setImageResource(menuItem.getIcon());
+        viewHolder.titleText.setText(menuItem.getTitle());
 
         return convertView;
     }
@@ -71,15 +72,14 @@ public class MenuListAdapter extends BaseAdapter {
     static class ViewHolder {
         ImageView iconImage;
         TextView titleText;
-        TextView descriptionText;
     }
 
     /**
      * Data methods
      */
 
-    public void addItem(String title, String description) {
-        mData.add(new Option(title, description));
+    public void addItem(int imageResourse, String title) {
+        mData.add(new MenuItem(imageResourse, title));
         notifyDataSetChanged();
     }
 
