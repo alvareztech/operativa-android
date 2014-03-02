@@ -24,11 +24,6 @@ public class MMSCFragment extends Fragment {
 
     private Context mContext;
 
-    private ImageView mTasaLlegadasImage;
-    private ImageView mTasaServicioImage;
-    private ImageView mNumeroCanalesServicioImage;
-    private ImageView mTamanoPoblacionImage;
-
     public MMSCFragment(Context context) {
         this.mContext = context;
     }
@@ -36,12 +31,6 @@ public class MMSCFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_queuingtheory_mmsc, container, false);
-
-        mTasaLlegadasImage = (ImageView) view.findViewById(R.id.tasaLlegadasImage);
-        mTasaServicioImage = (ImageView) view.findViewById(R.id.tasaServicioImage);
-        mNumeroCanalesServicioImage = (ImageView) view.findViewById(R.id.numeroCanalesServicioImage);
-        mTamanoPoblacionImage = (ImageView) view.findViewById(R.id.tamanoPoblacionImage);
-
         return view;
     }
 
@@ -49,13 +38,7 @@ public class MMSCFragment extends Fragment {
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-        mTasaLlegadasImage.setImageBitmap(Util.getPngBitmapFromAssets(mContext, "lamda"));
 
-        mTasaServicioImage.setImageBitmap(Util.getPngBitmapFromAssets(mContext, "mu"));
-
-        mNumeroCanalesServicioImage.setImageBitmap(Util.getPngBitmapFromAssets(mContext, "s"));
-
-        mTamanoPoblacionImage.setImageBitmap(Util.getPngBitmapFromAssets(mContext, "c"));
     }
 
 }

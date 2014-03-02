@@ -7,146 +7,73 @@
 
     <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="@dimen/normal_size"
-            >
+            android:layout_height="@dimen/normal_size">
 
         <ImageView
-                android:id="@+id/tasaLlegadasImage"
                 style="@style/Icon.Right"
-                android:src="@drawable/ic_action_person"
-
-                />
+                android:src="@drawable/lamda"/>
 
         <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="@string/tasa_de_llegadas"
-                android:gravity="center_vertical"
-                android:layout_margin="4dp"
-                />
-        
+                style="@style/FormText.Center"
+                android:text="@string/tasa_de_llegadas"/>
+
         <EditText
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:layout_marginTop="4dp"
-                android:layout_marginBottom="4dp"
-                android:layout_marginLeft="4dp"
-                android:inputType="numberDecimal"
-                />
+                style="@style/FormEditText.Left"
+                android:inputType="numberDecimal"/>
 
     </LinearLayout>
 
     <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="48dp"
-
-            >
+            android:layout_height="@dimen/normal_size">
 
         <ImageView
-                android:id="@+id/tasaServicioImage"
-                android:layout_width="32dp"
-                android:layout_height="match_parent"
-                android:src="@drawable/ic_action_person"
-                android:scaleType="centerInside"
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="8dp"
-                android:layout_marginRight="4dp"
-                />
+                style="@style/Icon.Right"
+                android:src="@drawable/mu"/>
 
         <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="@string/tasa_de_servicio"
-                android:gravity="center_vertical"
-                android:layout_margin="4dp"
-                />
+                style="@style/FormText.Center"
+                android:text="@string/tasa_de_servicio"/>
 
         <EditText
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:layout_marginTop="4dp"
-                android:layout_marginBottom="4dp"
-                android:layout_marginLeft="4dp"
-                android:inputType="numberDecimal"
-                />
+                style="@style/FormEditText.Left"
+                android:inputType="numberDecimal"/>
 
     </LinearLayout>
 
     <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="48dp"
-            >
+            android:layout_height="@dimen/normal_size">
 
         <ImageView
-                android:id="@+id/numeroCanalesServicioImage"
-                android:layout_width="32dp"
-                android:layout_height="match_parent"
-                android:src="@drawable/ic_action_network_wifi"
-                android:scaleType="centerInside"
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="8dp"
-                android:layout_marginRight="4dp"
-                />
+                style="@style/Icon.Right"
+                android:src="@drawable/s"/>
 
         <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="@string/numero_de_canales_de_servicio"
-                android:gravity="center_vertical"
-                android:layout_margin="4dp"
-                />
+                style="@style/FormText.Center"
+                android:text="@string/numero_de_canales_de_servicio"/>
 
         <EditText
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:layout_marginTop="4dp"
-                android:layout_marginBottom="4dp"
-                android:layout_marginLeft="4dp"
-                android:inputType="number"
-                />
+                style="@style/FormEditText.Left"
+                android:inputType="number"/>
 
     </LinearLayout>
 
     <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="48dp"
-            >
+            android:layout_height="@dimen/normal_size">
 
         <ImageView
-                android:id="@+id/tamanoPoblacionImage"
-                android:layout_width="32dp"
-                android:layout_height="match_parent"
-                android:src="@drawable/ic_action_network_wifi"
-                android:scaleType="centerInside"
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="8dp"
-                android:layout_marginRight="4dp"
-                />
+                style="@style/Icon.Right"
+                android:src="@drawable/c"/>
 
         <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="@string/tamano_de_la_poblacion"
-                android:gravity="center_vertical"
-                android:layout_margin="4dp"
-                />
+                style="@style/FormText.Center"
+                android:text="@string/tamano_de_la_poblacion"/>
 
         <EditText
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:layout_marginTop="4dp"
-                android:layout_marginBottom="4dp"
-                android:layout_marginLeft="4dp"
-                android:inputType="number"
-                />
+                style="@style/FormEditText.Left"
+                android:inputType="number"/>
 
     </LinearLayout>
 

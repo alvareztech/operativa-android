@@ -30,6 +30,10 @@
         <item name="android:layout_marginRight">@dimen/list_view_margin</item>
     </style>
 
+    <!-- Form -->
+
+    <!-- Icon Form -->
+
     <style name="Icon">
         <item name="android:layout_width">32dp</item>
         <item name="android:layout_height">32dp</item>
@@ -47,6 +51,57 @@
     </style>
 
     <style name="Icon.Right">
+        <item name="android:layout_marginRight">@dimen/view_margin</item>
+    </style>
+
+
+    <style name="FormText" parent="android:Widget.TextView">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+
+        <item name="android:layout_marginTop">@dimen/view_margin</item>
+        <item name="android:layout_marginBottom">@dimen/view_margin</item>
+        <item name="android:layout_marginLeft">0dp</item>
+        <item name="android:layout_marginRight">0dp</item>
+
+        <item name="android:gravity">center_vertical</item>
+
+        <item name="android:textColor">@color/text_color_secondary_dark</item>
+
+    </style>
+
+    <style name="FormText.Right">
+        <item name="android:layout_marginRight">@dimen/view_margin</item>
+    </style>
+
+    <style name="FormText.Left">
+        <item name="android:layout_marginLeft">@dimen/view_margin</item>
+    </style>
+
+    <style name="FormText.Center">
+        <item name="android:layout_marginLeft">@dimen/view_margin</item>
+        <item name="android:layout_marginRight">@dimen/view_margin</item>
+    </style>
+
+    <!-- Form EditText-->
+
+    <style name="FormEditText" parent="android:Widget.EditText">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+
+        <item name="android:layout_marginTop">@dimen/view_margin</item>
+        <item name="android:layout_marginBottom">@dimen/view_margin</item>
+        <item name="android:layout_marginLeft">0dp</item>
+        <item name="android:layout_marginRight">0dp</item>
+    </style>
+
+    <style name="FormEditText.Left">
+        <item name="android:layout_marginLeft">@dimen/view_margin</item>
+    </style>
+
+    <style name="FormEditText.Right">
         <item name="android:layout_marginRight">@dimen/view_margin</item>
     </style>
 
