@@ -7,64 +7,41 @@
 
     <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="48dp"
-            >
+            android:layout_height="@dimen/normal_size">
 
         <ImageView
-                android:layout_width="48dp"
-                android:layout_height="match_parent"
-                android:background="#000"
-                />
+                style="@style/Icon.Right"
+                android:src="@drawable/lamda"/>
 
         <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="@string/tasa_de_llegadas"
-                android:gravity="center_vertical"
-                android:layout_margin="4dp"
-                />
-        
+                style="@style/FormText.Center"
+                android:text="@string/tasa_de_llegadas"/>
+
         <EditText
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:layout_marginTop="4dp"
-                android:layout_marginBottom="4dp"
-                android:layout_marginLeft="4dp"
-                />
+                android:id="@+id/tasaLlegadasEditText"
+                style="@style/FormEditText.Left"
+                android:inputType="numberDecimal"/>
 
     </LinearLayout>
 
     <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="48dp"
-            >
+            android:layout_height="@dimen/normal_size">
 
         <ImageView
-                android:layout_width="48dp"
-                android:layout_height="match_parent"
-                android:background="#000"
-                />
+                style="@style/Icon.Right"
+                android:src="@drawable/mu"/>
 
         <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="@string/tasa_de_servicio"
-                android:gravity="center_vertical"
-                android:layout_margin="4dp"
-                />
+                style="@style/FormText.Center"
+                android:text="@string/tasa_de_servicio"/>
 
         <EditText
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:layout_marginTop="4dp"
-                android:layout_marginBottom="4dp"
-                android:layout_marginLeft="4dp"
-                />
+                android:id="@+id/tasaServicioEditText"
+                style="@style/FormEditText.Left"
+                android:inputType="numberDecimal"/>
 
     </LinearLayout>
+
 
 </LinearLayout>

@@ -9,25 +9,24 @@ public class ResultItem {
 
     private String titleSection;
 
-    private Bitmap icon;
+    private int idIcon;
     private String description;
     private double result;
 
 
-    public ResultItem(String titleSection, Bitmap icon, String description, double result) {
+    public ResultItem(String titleSection, int idIcon, String description, double result) {
         this.titleSection = titleSection;
-        this.icon = icon;
+        this.idIcon = idIcon;
         this.description = description;
         this.result = result;
     }
 
-    public ResultItem(Bitmap icon, String description, double result) {
+    public ResultItem(int idIcon, String description, double result) {
         this.titleSection = "";
-        this.icon = icon;
+        this.idIcon = idIcon;
         this.description = description;
         this.result = result;
     }
-
 
     public String getTitleSection() {
         return titleSection;
@@ -37,12 +36,12 @@ public class ResultItem {
         this.titleSection = titleSection;
     }
 
-    public Bitmap getIcon() {
-        return icon;
+    public int getIdIcon() {
+        return idIcon;
     }
 
-    public void setIcon(Bitmap icon) {
-        this.icon = icon;
+    public void setIdIcon(int idIcon) {
+        this.idIcon = idIcon;
     }
 
     public String getDescription() {

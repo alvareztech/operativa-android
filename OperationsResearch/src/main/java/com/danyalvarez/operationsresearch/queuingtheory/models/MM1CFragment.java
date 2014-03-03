@@ -1,36 +1,35 @@
-package com.danyalvarez.operationsresearch.fragments.queuingtheory;
+package com.danyalvarez.operationsresearch.queuingtheory.models;
 
 import android.content.Context;
-import android.content.res.AssetManager;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
+import android.widget.EditText;
 import com.danyalvarez.operationsresearch.R;
-import com.danyalvarez.operationsresearch.util.Util;
-
-import java.io.IOException;
-import java.io.InputStream;
 
 /**
  * Created by daniel on 21/02/14.
  */
-public class MMSCFragment extends Fragment {
+public class MM1CFragment extends Fragment {
 
     private Context mContext;
 
-    public MMSCFragment(Context context) {
-        this.mContext = context;
+    private EditText mTasaLlegadasEditText;
+    private EditText mTasaServicioEditText;
+
+    public MM1CFragment(Context mContext) {
+        this.mContext = mContext;
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_queuingtheory_mmsc, container, false);
+        View view = inflater.inflate(R.layout.fragment_queuingtheory_mm1c, container, false);
+
+        mTasaLlegadasEditText = (EditText) view.findViewById(R.id.tasaLlegadasEditText);
+        mTasaServicioEditText = (EditText) view.findViewById(R.id.tasaServicioEditText);
+
         return view;
     }
 
@@ -40,5 +39,4 @@ public class MMSCFragment extends Fragment {
 
 
     }
-
 }

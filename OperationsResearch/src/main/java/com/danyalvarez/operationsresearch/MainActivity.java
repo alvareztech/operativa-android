@@ -9,7 +9,7 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.view.*;
 import android.widget.TextView;
-import com.danyalvarez.operationsresearch.fragments.OptionsFragment;
+import com.danyalvarez.operationsresearch.queuingtheory.OptionsFragment;
 
 public class MainActivity extends ActionBarActivity implements NavigationDrawerFragment.NavigationDrawerCallbacks {
 
@@ -45,30 +45,41 @@ public class MainActivity extends ActionBarActivity implements NavigationDrawerF
                 fragment = new OptionsFragment(this);
                 break;
             case 1:
-
+                fragment = new InventoriesFragment(this);
                 break;
             case 2:
-
+                fragment = new ConverterFragment(this);
+                break;
+            case 3:
+                fragment = new ConfigurationFragment(this);
+                break;
+            case 4:
+                fragment = new CreditsFragment(this);
                 break;
         }
 
         // update the main content by replacing fragments
         FragmentManager fragmentManager = getSupportFragmentManager();
-        fragmentManager.beginTransaction()
-                .replace(R.id.container, fragment)
-                .commit();
+        fragmentManager.beginTransaction().replace(R.id.container, fragment).commit();
     }
 
     public void onSectionAttached(int number) {
+
         switch (number) {
             case 1:
-                mTitle = getString(R.string.title_section1);
+                mTitle = getString(R.string.queuing_theory);
                 break;
             case 2:
-                mTitle = getString(R.string.title_section2);
+                mTitle = getString(R.string.inventories);
                 break;
             case 3:
-                mTitle = getString(R.string.title_section3);
+                mTitle = getString(R.string.converter);
+                break;
+            case 4:
+                mTitle = getString(R.string.configuration);
+                break;
+            case 5:
+                mTitle = getString(R.string.credits);
                 break;
         }
     }

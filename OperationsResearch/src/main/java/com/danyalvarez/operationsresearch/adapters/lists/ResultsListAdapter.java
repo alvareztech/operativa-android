@@ -74,7 +74,7 @@ public class ResultsListAdapter extends BaseAdapter {
             viewHolder.sectionViewGroup.setVisibility(View.GONE);
         }
 
-        viewHolder.iconImage.setImageBitmap(result.getIcon());
+        viewHolder.iconImage.setImageResource(result.getIdIcon());
         viewHolder.descriptionText.setText(result.getDescription());
         viewHolder.resultText.setText(result.getResult() + "");
 
@@ -98,13 +98,13 @@ public class ResultsListAdapter extends BaseAdapter {
      * Data methods
      */
 
-    public void addItem(String iconName, String description, double result) {
-        mData.add(new ResultItem(Util.getPngBitmapFromAssets(mContext, iconName), description, result));
+    public void addItem(int idIcon, String description, double result) {
+        mData.add(new ResultItem(idIcon, description, result));
         notifyDataSetChanged();
     }
 
-    public void addItem(String titleSection, String iconName, String description, double result) {
-        mData.add(new ResultItem(titleSection, Util.getPngBitmapFromAssets(mContext, iconName), description, result));
+    public void addItem(String titleSection, int idIcon, String description, double result) {
+        mData.add(new ResultItem(titleSection, idIcon, description, result));
         notifyDataSetChanged();
     }
 

@@ -14,8 +14,8 @@
         <item name="android:textSize">@dimen/text_size_medium</item>
         <item name="android:layout_marginTop">@dimen/view_margin</item>
         <item name="android:layout_marginBottom">0dp</item>
-        <item name="android:layout_marginLeft">@dimen/list_view_margin</item>
-        <item name="android:layout_marginRight">@dimen/list_view_margin</item>
+        <item name="android:layout_marginLeft">0dp</item>
+        <item name="android:layout_marginRight">0dp</item>
         <item name="android:fontFamily">sans-serif-light</item>
     </style>
 
@@ -26,8 +26,8 @@
         <item name="android:textSize">@dimen/text_size_small</item>
         <item name="android:layout_marginTop">0dp</item>
         <item name="android:layout_marginBottom">@dimen/view_margin</item>
-        <item name="android:layout_marginLeft">@dimen/list_view_margin</item>
-        <item name="android:layout_marginRight">@dimen/list_view_margin</item>
+        <item name="android:layout_marginLeft">0dp</item>
+        <item name="android:layout_marginRight">0dp</item>
     </style>
 
     <!-- Form -->
@@ -52,6 +52,14 @@
 
     <style name="Icon.Right">
         <item name="android:layout_marginRight">@dimen/view_margin</item>
+    </style>
+
+    <style name="Icon.Left.NoAlpha">
+        <item name="android:background">#FFFFFF</item>
+    </style>
+
+    <style name="Icon.Right.NoAlpha">
+        <item name="android:background">#fff</item>
     </style>
 
 
@@ -103,6 +111,28 @@
 
     <style name="FormEditText.Right">
         <item name="android:layout_marginRight">@dimen/view_margin</item>
+    </style>
+
+
+    <!-- Title Section List -->
+    <style name="ListSectionTitle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_weight">1</item>
+
+        <item name="android:layout_marginTop">@dimen/view_margin</item>
+        <item name="android:layout_marginBottom">@dimen/view_margin</item>
+        <item name="android:layout_marginLeft">8dp</item>
+        <item name="android:layout_marginRight">8dp</item>
+
+        <item name="android:gravity">bottom</item>
+
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/text_color_primary_dark</item>
+        <item name="android:textSize">@dimen/text_size_small</item>
+        <item name="android:textStyle">bold</item>
+
+
     </style>
 
 </resources>

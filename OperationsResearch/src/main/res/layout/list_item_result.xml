@@ -9,57 +9,37 @@
     <LinearLayout
             android:id="@+id/sectionViewGroup"
             android:layout_width="match_parent"
-            android:layout_height="36dp"
-            android:orientation="vertical"
-            android:gravity="bottom"
-            >
+            android:layout_height="@dimen/small_size"
+            android:orientation="vertical">
 
         <TextView
                 android:id="@+id/titleSectionText"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 android:text="@string/app_name"
-                android:textAllCaps="true"
-                android:textColor="@color/text_color_primary_dark"
-                android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginTop="4dp"
-                android:layout_marginBottom="4dp"
-                />
+                style="@style/ListSectionTitle"/>
 
         <View
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
-                android:background="@color/text_color_primary_dark"
-                />
+                android:background="@color/text_color_primary_dark"/>
 
 
     </LinearLayout>
 
     <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="48dp"
+            android:layout_height="@dimen/normal_size"
             android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
-            >
+            android:layout_marginRight="8dp">
 
         <ImageView
                 android:id="@+id/iconImage"
-                android:layout_width="32dp"
-                android:layout_height="32dp"
-                android:src="@drawable/ic_action_network_wifi"
-                android:scaleType="centerInside"
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="8dp"
-                android:layout_marginRight="4dp"
-                />
+                style="@style/Icon.Right"
+                android:src="@drawable/ic_action_network_wifi"/>
 
         <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginLeft="4dp"
-                >
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
             <TextView
                     android:id="@+id/descriptionText"
@@ -69,18 +49,26 @@
 
                     android:textSize="@dimen/text_size_small"
                     android:layout_marginTop="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="0dp"
+                    android:layout_marginBottom="0dp"
                     />
 
             <TextView
                     android:id="@+id/resultText"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
                     android:text="@string/app_name"
                     android:textSize="@dimen/text_size_medium"
                     android:fontFamily="sans-serif-light"
-                    android:layout_marginBottom="4dp"
-                    android:gravity="right"
+                    android:gravity="right|bottom"
                     android:textColor="@color/text_color_primary_dark"
+
+                    android:layout_marginTop="0dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="0dp"
+                    android:layout_marginBottom="4dp"
                     />
 
         </LinearLayout>

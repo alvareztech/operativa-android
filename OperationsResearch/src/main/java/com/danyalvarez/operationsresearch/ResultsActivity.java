@@ -25,22 +25,22 @@ public class ResultsActivity extends ActionBarActivity {
     }
 
     private void addItems() {
-        mListAdapter.addItem("lamda", "Tasa de llegadas", 2.321);
-        mListAdapter.addItem("mu", "Tasa de servicio", 2.321);
-        mListAdapter.addItem("Probabilidad", "rho", "De encontrar el sistema ocupado", 0.000000006);
-        mListAdapter.addItem("p0", "De que el sistema este vacio u oscioso", 987123);
+        mListAdapter.addItem(R.drawable.lamda, "Tasa de llegadas", 2.321);
+        mListAdapter.addItem(R.drawable.mu, "Tasa de servicio", 2.321);
+        mListAdapter.addItem("Probabilidad", R.drawable.rho, "De encontrar el sistema ocupado", 0.000000006);
+        mListAdapter.addItem(R.drawable.p0, "De que el sistema este vacio u oscioso", 987123);
 
-        mListAdapter.addItem("Número promedio o esperado", "l", "De unidades en el sistema", 2.321);
-        mListAdapter.addItem("lq", "De unidades en cola", 2.321);
+        mListAdapter.addItem("Número promedio o esperado", R.drawable.l, "De unidades en el sistema", 2.321);
+        mListAdapter.addItem(R.drawable.lq, "De unidades en cola", 2.321);
 
-        mListAdapter.addItem("Tiempo medio de espera", "w", "En el sistema", 2.321);
-        mListAdapter.addItem("wq", "En la cola", 2.321);
+        mListAdapter.addItem("Tiempo medio de espera", R.drawable.w, "En el sistema", 2.321);
+        mListAdapter.addItem(R.drawable.wq, "En la cola", 2.321);
 
-        mListAdapter.addItem("Probabilidad de encontrar", "p1", "1 unidades en el sistema", 2342.234234);
-        mListAdapter.addItem("p2", "2 unidades en el sistema", 2.321);
-        mListAdapter.addItem("p3", "3 unidades en el sistema", 2.321);
-        mListAdapter.addItem("p4", "4 unidades en el sistema", 2.321);
-        mListAdapter.addItem("p5", "5 unidades en el sistema", 2.321);
+        mListAdapter.addItem("Probabilidad de encontrar", R.drawable.p1, "1 unidades en el sistema", 2342.234234);
+        mListAdapter.addItem(R.drawable.p2, "2 unidades en el sistema", 2.321);
+        mListAdapter.addItem(R.drawable.p3, "3 unidades en el sistema", 2.321);
+        mListAdapter.addItem(R.drawable.p4, "4 unidades en el sistema", 2.321);
+        mListAdapter.addItem(R.drawable.p5, "5 unidades en el sistema", 2.321);
     }
 
 

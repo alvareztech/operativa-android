@@ -49,25 +49,6 @@
 
         <ImageView
                 style="@style/Icon.Right"
-                android:src="@drawable/s"/>
-
-        <TextView
-                style="@style/FormText.Center"
-                android:text="@string/numero_de_canales_de_servicio"/>
-
-        <EditText
-                android:id="@+id/canalesServicioEditText"
-                style="@style/FormEditText.Left"
-                android:inputType="number"/>
-
-    </LinearLayout>
-
-    <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/normal_size">
-
-        <ImageView
-                style="@style/Icon.Right"
                 android:src="@drawable/c"/>
 
         <TextView

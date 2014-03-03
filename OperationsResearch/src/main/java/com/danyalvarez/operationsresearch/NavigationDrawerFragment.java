@@ -97,11 +97,11 @@ public class NavigationDrawerFragment extends Fragment {
         });
 
         mListAdapter = new MenuListAdapter(getActivity());
-        mListAdapter.addItem(R.drawable.ic_action_overflow, "Teoría de Colas");
-        mListAdapter.addItem(R.drawable.ic_action_paste, "Inventarios");
-        mListAdapter.addItem(R.drawable.ic_action_import_export, "Conversor");
-        mListAdapter.addItem(R.drawable.ic_action_settings, "Configuración");
-        mListAdapter.addItem(R.drawable.ic_action_about, "Créditos");
+        mListAdapter.addItem(R.drawable.ic_action_overflow, getString(R.string.queuing_theory));
+        mListAdapter.addItem(R.drawable.ic_action_paste, getString(R.string.inventories));
+        mListAdapter.addItem(R.drawable.ic_action_import_export, getString(R.string.converter));
+        mListAdapter.addItem(R.drawable.ic_action_settings, getString(R.string.configuration));
+        mListAdapter.addItem(R.drawable.ic_action_about, getString(R.string.credits));
         mDrawerListView.setAdapter(mListAdapter);
 
         mDrawerListView.setItemChecked(mCurrentSelectedPosition, true);

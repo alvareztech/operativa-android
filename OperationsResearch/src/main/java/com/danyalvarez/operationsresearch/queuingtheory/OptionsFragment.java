@@ -1,4 +1,4 @@
-package com.danyalvarez.operationsresearch.fragments;
+package com.danyalvarez.operationsresearch.queuingtheory;
 
 import android.app.Activity;
 import android.content.Context;
@@ -51,15 +51,16 @@ public class OptionsFragment extends ListFragment {
     @Override
     public void onAttach(Activity activity) {
         super.onAttach(activity);
-//        ((MainActivity) activity).onSectionAttached(getArguments().getInt(ARG_SECTION_NUMBER));
+        ((MainActivity) activity).onSectionAttached(1);
     }
 
 
     @Override
     public void onListItemClick(ListView l, View v, int position, long id) {
         super.onListItemClick(l, v, position, id);
-        if (position == 2) {
-            startActivity(new Intent(getActivity(), InputModelActivity.class));
-        }
+
+        Intent intent = new Intent(mContext, InputModelActivity.class);
+        intent.putExtra("model", (int) (id + 1));
+        startActivity(intent);
     }
 }
