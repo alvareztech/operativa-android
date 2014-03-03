@@ -1,15 +1,13 @@
 package com.danyalvarez.operationsresearch;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import com.danyalvarez.operationsresearch.queuingtheory.*;
-import com.danyalvarez.operationsresearch.queuingtheory.models.*;
+import com.danyalvarez.operationsresearch.queuingtheory.models.fragments.*;
 
 public class InputModelActivity extends ActionBarActivity {
 
@@ -31,11 +29,9 @@ public class InputModelActivity extends ActionBarActivity {
         actionBar.setDisplayHomeAsUpEnabled(true);
         actionBar.setDisplayShowHomeEnabled(false);
         actionBar.setDisplayShowTitleEnabled(true);
-        actionBar.setTitle("Modelo M/M/1");
-        actionBar.setSubtitle("Teoria de Colas");
+        actionBar.setTitle(getIntent().getStringExtra("title"));
+        actionBar.setSubtitle("Teoría de Colas");
         actionBar.setDisplayUseLogoEnabled(false);
-
-
     }
 
 
@@ -54,10 +50,9 @@ public class InputModelActivity extends ActionBarActivity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
         if (id == R.id.action_calculate) {
-            Log.i("o", "action calculate");
 
-            Intent intent = new Intent(this, ResultsActivity.class);
-            startActivity(intent);
+            MM1Fragment fragment = (MM1Fragment) getSupportFragmentManager().findFragmentById(R.id.container);
+            fragment.calculate();
 
             return true;
         }

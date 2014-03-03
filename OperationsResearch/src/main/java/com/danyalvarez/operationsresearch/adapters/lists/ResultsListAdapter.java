@@ -8,10 +8,8 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 import com.danyalvarez.operationsresearch.R;
-import com.danyalvarez.operationsresearch.classes.Option;
 import com.danyalvarez.operationsresearch.classes.ResultItem;
-import com.danyalvarez.operationsresearch.util.Util;
-import org.w3c.dom.Text;
+import com.danyalvarez.operationsresearch.util.Format;
 
 import java.util.ArrayList;
 
@@ -50,7 +48,7 @@ public class ResultsListAdapter extends BaseAdapter {
         ViewHolder viewHolder;
         if (convertView == null) {
             convertView = mLayoutInflater.inflate(R.layout.list_item_result, null);
-            viewHolder =  new ViewHolder();
+            viewHolder = new ViewHolder();
 
             viewHolder.sectionViewGroup = (ViewGroup) convertView.findViewById(R.id.sectionViewGroup);
             viewHolder.titleSectionText = (TextView) convertView.findViewById(R.id.titleSectionText);
@@ -76,9 +74,13 @@ public class ResultsListAdapter extends BaseAdapter {
 
         viewHolder.iconImage.setImageResource(result.getIdIcon());
         viewHolder.descriptionText.setText(result.getDescription());
-        viewHolder.resultText.setText(result.getResult() + "");
+        viewHolder.resultText.setText(result.getResult());
 
         return convertView;
+    }
+
+    public void setData(ArrayList<ResultItem> data) {
+        this.mData = data;
     }
 
     /**
@@ -98,12 +100,12 @@ public class ResultsListAdapter extends BaseAdapter {
      * Data methods
      */
 
-    public void addItem(int idIcon, String description, double result) {
+    public void addItem(int idIcon, String description, String result) {
         mData.add(new ResultItem(idIcon, description, result));
         notifyDataSetChanged();
     }
 
-    public void addItem(String titleSection, int idIcon, String description, double result) {
+    public void addItem(String titleSection, int idIcon, String description, String result) {
         mData.add(new ResultItem(titleSection, idIcon, description, result));
         notifyDataSetChanged();
     }

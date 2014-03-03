@@ -25,6 +25,26 @@
     <string name="limite_del_sistema">Límite del sistema</string>
     <string name="daniel_alvarez">Daniel Alvarez</string>
 
+
+
+
+
+    <string name="numero_esperado_unidades">Número esperado de unidades</string>
+
+    <string name="en_sistema">En el sistema</string>
+    <string name="en_cola">En la cola</string>
+
+    <string name="tiempo_medio_espera">Tiempo medio de espera</string>
+
+
+    <string name="probabilidades">PROBABILIDADES</string>
+    <string name="encontrar_sistema_ocupado">Encontrar el sistema ocupado</string>
+    <string name="sistema_vacio_oscioso">Encontrar el sistema vacio u oscioso</string>
+
+    <string name="encontrar_">Encontrar&#160;</string>
+    <string name="_unidad_en_sistema">&#160;unidad en el sistema</string>
+    <string name="_unidades_en_sistema">&#160;unidades en el sistema</string>
+
     <!-- Inventories -->
 
     <string name="inventories">Inventarios</string>

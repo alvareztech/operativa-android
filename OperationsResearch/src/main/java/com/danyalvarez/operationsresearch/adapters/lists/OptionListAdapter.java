@@ -48,6 +48,9 @@ public class OptionListAdapter extends BaseAdapter {
             convertView = mLayoutInflater.inflate(R.layout.list_item_option, null);
             viewHolder =  new ViewHolder();
 
+            viewHolder.sectionViewGroup = (ViewGroup) convertView.findViewById(R.id.sectionViewGroup);
+            viewHolder.titleSectionText = (TextView) convertView.findViewById(R.id.titleSectionText);
+
             viewHolder.titleText = (TextView) convertView.findViewById(R.id.titleText);
             viewHolder.descriptionText = (TextView) convertView.findViewById(R.id.descriptionText);
 
@@ -57,6 +60,15 @@ public class OptionListAdapter extends BaseAdapter {
         }
 
         Option option = mData.get(position);
+
+        if (option.getTitleSection().length() > 0) {
+            viewHolder.sectionViewGroup.setVisibility(View.VISIBLE);
+            viewHolder.titleSectionText.setText(option.getTitleSection());
+        } else {
+            viewHolder.sectionViewGroup.setVisibility(View.GONE);
+            viewHolder.titleSectionText.setText("");
+        }
+
         viewHolder.titleText.setText(option.getTitle());
         viewHolder.descriptionText.setText(option.getDescription());
 
@@ -68,6 +80,9 @@ public class OptionListAdapter extends BaseAdapter {
      */
 
     static class ViewHolder {
+        ViewGroup sectionViewGroup;
+        TextView titleSectionText;
+
         TextView titleText;
         TextView descriptionText;
     }
@@ -78,6 +93,11 @@ public class OptionListAdapter extends BaseAdapter {
 
     public void addItem(String title, String description) {
         mData.add(new Option(title, description));
+        notifyDataSetChanged();
+    }
+
+    public void addItem(String titleSection, String title, String description) {
+        mData.add(new Option(titleSection, title, description));
         notifyDataSetChanged();
     }
 

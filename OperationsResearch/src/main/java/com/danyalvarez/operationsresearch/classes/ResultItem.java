@@ -1,27 +1,35 @@
 package com.danyalvarez.operationsresearch.classes;
 
-import android.graphics.Bitmap;
+import android.os.Bundle;
+import android.os.Parcel;
+import android.os.Parcelable;
 
 /**
  * Created by daniel on 22/02/14.
  */
-public class ResultItem {
+public class ResultItem implements Parcelable {
 
     private String titleSection;
 
     private int idIcon;
     private String description;
-    private double result;
+    private String result;
 
+    public ResultItem() {
+        this.titleSection = "";
+        this.idIcon = 0;
+        this.description = "";
+        this.result = "";
+    }
 
-    public ResultItem(String titleSection, int idIcon, String description, double result) {
+    public ResultItem(String titleSection, int idIcon, String description, String result) {
         this.titleSection = titleSection;
         this.idIcon = idIcon;
         this.description = description;
         this.result = result;
     }
 
-    public ResultItem(int idIcon, String description, double result) {
+    public ResultItem(int idIcon, String description, String result) {
         this.titleSection = "";
         this.idIcon = idIcon;
         this.description = description;
@@ -52,11 +60,43 @@ public class ResultItem {
         this.description = description;
     }
 
-    public double getResult() {
+    public String getResult() {
         return result;
     }
 
-    public void setResult(double result) {
+    public void setResult(String result) {
         this.result = result;
     }
+
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(titleSection);
+        dest.writeInt(idIcon);
+        dest.writeString(description);
+        dest.writeString(result);
+    }
+
+
+    public static final Parcelable.Creator<ResultItem> CREATOR = new Parcelable.Creator<ResultItem>() {
+
+        public ResultItem createFromParcel(Parcel in) {
+            ResultItem resultItem = new ResultItem();
+            resultItem.titleSection = in.readString();
+            resultItem.idIcon = in.readInt();
+            resultItem.description = in.readString();
+            resultItem.result = in.readString();
+            return resultItem;
+        }
+
+        @Override
+        public ResultItem[] newArray(int size) {
+            return new ResultItem[size];
+        }
+    };
 }

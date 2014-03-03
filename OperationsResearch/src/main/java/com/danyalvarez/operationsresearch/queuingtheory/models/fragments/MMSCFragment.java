@@ -1,4 +1,4 @@
-package com.danyalvarez.operationsresearch.queuingtheory.models;
+package com.danyalvarez.operationsresearch.queuingtheory.models.fragments;
 
 import android.content.Context;
 import android.os.Bundle;

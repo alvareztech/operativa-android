@@ -1,4 +1,4 @@
-package com.danyalvarez.operationsresearch.queuingtheory.models;
+package com.danyalvarez.operationsresearch.queuingtheory.models.fragments;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -12,20 +12,20 @@ import com.danyalvarez.operationsresearch.R;
 /**
  * Created by daniel on 21/02/14.
  */
-public class MMSKFragment extends Fragment {
+public class MM1KFragment extends Fragment {
 
     private Context mContext;
 
     private EditText mTasaLlegadasEditText;
     private EditText mTasaServicioEditText;
 
-    public MMSKFragment(Context mContext) {
+    public MM1KFragment(Context mContext) {
         this.mContext = mContext;
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_queuingtheory_mmsk, container, false);
+        View view = inflater.inflate(R.layout.fragment_queuingtheory_mm1k, container, false);
 
         mTasaLlegadasEditText = (EditText) view.findViewById(R.id.tasaLlegadasEditText);
         mTasaServicioEditText = (EditText) view.findViewById(R.id.tasaServicioEditText);

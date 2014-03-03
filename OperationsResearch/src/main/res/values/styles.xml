@@ -131,7 +131,7 @@
         <item name="android:textColor">@color/text_color_primary_dark</item>
         <item name="android:textSize">@dimen/text_size_small</item>
         <item name="android:textStyle">bold</item>
-
+        <item name="android:lines">1</item>
 
     </style>
 

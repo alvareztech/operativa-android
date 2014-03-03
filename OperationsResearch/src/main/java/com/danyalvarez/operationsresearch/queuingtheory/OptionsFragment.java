@@ -23,6 +23,16 @@ public class OptionsFragment extends ListFragment {
     private Context mContext;
     private OptionListAdapter mListAdapter;
 
+    private String[] titles = {"M/M/1", "M/M/S", "M/M/1/C", "M/M/S/C", "M/M/1/K", "M/M/S/K"};
+    private String[] descriptions = {
+            "Población infinita, capacidad del sistema infinito, un canal de servicio",
+            "Población infinita, capacidad del sistema infinito, S canales de servicio",
+            "Población de tamaño C, capacidad del sistema infinito, un canal de servicio",
+            "Población de tamaño C, capacidad del sistema infinito, S canales de servicio",
+            "Población infinita, capacidad del sistema limitado a K, un canal de servicio",
+            "Población infinita, capacidad del sistema limitado a K, S canales de servicio"
+    };
+
     public OptionsFragment(Context mContext) {
         this.mContext = mContext;
     }
@@ -38,13 +48,13 @@ public class OptionsFragment extends ListFragment {
         super.onActivityCreated(savedInstanceState);
 
         mListAdapter = new OptionListAdapter(mContext);
-        mListAdapter.addItem("M/M/1", "Población infinita, capacidad del sistema infinito, un canal de servicio");
-        mListAdapter.addItem("M/M/S", "Población infinita, capacidad del sistema infinito, S canales de servicio");
-        mListAdapter.addItem("M/M/1/C", "Población de tamaño C, capacidad del sistema infinito, un canal de servicio");
-        mListAdapter.addItem("M/M/S/C", "Población de tamaño C, capacidad del sistema infinito, S canales de servicio");
-        mListAdapter.addItem("M/M/1/K", "Población infinita, capacidad del sistema limitado a K, un canal de servicio");
-        mListAdapter.addItem("M/M/S/K", "Población infinita, capacidad del sistema limitado a K, S canales de servicio");
-
+        for (int i = 0; i < titles.length; i++) {
+            if (i == 0) {
+                mListAdapter.addItem("MODELOS", titles[i], descriptions[i]);
+            } else {
+                mListAdapter.addItem(titles[i], descriptions[i]);
+            }
+        }
         setListAdapter(mListAdapter);
     }
 
@@ -60,6 +70,7 @@ public class OptionsFragment extends ListFragment {
         super.onListItemClick(l, v, position, id);
 
         Intent intent = new Intent(mContext, InputModelActivity.class);
+        intent.putExtra("title", titles[position]);
         intent.putExtra("model", (int) (id + 1));
         startActivity(intent);
     }
