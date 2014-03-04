@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.danyalvarez.operationsresearch">
+          package="com.danyalvarez.operationsresearch"
+
+        >
 
     <application
             android:allowBackup="true"
             android:icon="@drawable/ic_launcher"
-            android:label="@string/app_name"
-            android:theme="@style/AppTheme">
+            android:label="@string/app_name_short"
+            android:theme="@style/AppTheme"
+            android:debuggable="false"
+            >
         <activity
                 android:name="com.danyalvarez.operationsresearch.MainActivity"
-                android:label="@string/app_name"
                 android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -19,22 +22,14 @@
         </activity>
         <activity
                 android:name="com.danyalvarez.operationsresearch.InputModelActivity"
-                android:label="@string/title_activity_input_model"
                 android:parentActivityName="com.danyalvarez.operationsresearch.MainActivity"
                 android:screenOrientation="portrait">
-            <meta-data
-                    android:name="android.support.PARENT_ACTIVITY"
-                    android:value="MainActivity"/>
         </activity>
         <activity
                 android:name="com.danyalvarez.operationsresearch.ResultsActivity"
-                android:label="@string/title_activity_results"
                 android:parentActivityName="com.danyalvarez.operationsresearch.InputModelActivity"
                 android:screenOrientation="portrait"
                 >
-            <meta-data
-                    android:name="android.support.PARENT_ACTIVITY"
-                    android:value="InputModelActivity"/>
         </activity>
     </application>
 

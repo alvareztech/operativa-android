@@ -98,10 +98,10 @@ public class NavigationDrawerFragment extends Fragment {
 
         mListAdapter = new MenuListAdapter(getActivity());
         mListAdapter.addItem(R.drawable.ic_action_overflow, getString(R.string.queuing_theory));
-        mListAdapter.addItem(R.drawable.ic_action_paste, getString(R.string.inventories));
-        mListAdapter.addItem(R.drawable.ic_action_import_export, getString(R.string.converter));
-        mListAdapter.addItem(R.drawable.ic_action_settings, getString(R.string.configuration));
-        mListAdapter.addItem(R.drawable.ic_action_about, getString(R.string.credits));
+//        mListAdapter.addItem(R.drawable.ic_action_paste, getString(R.string.inventories));
+//        mListAdapter.addItem(R.drawable.ic_action_import_export, getString(R.string.converter));
+//        mListAdapter.addItem(R.drawable.ic_action_settings, getString(R.string.configuration));
+        mListAdapter.addItem(R.drawable.ic_action_about, getString(R.string.information));
         mDrawerListView.setAdapter(mListAdapter);
 
         mDrawerListView.setItemChecked(mCurrentSelectedPosition, true);
@@ -245,10 +245,10 @@ public class NavigationDrawerFragment extends Fragment {
             return true;
         }
 
-        if (item.getItemId() == R.id.action_example) {
-            Toast.makeText(getActivity(), "Example action.", Toast.LENGTH_SHORT).show();
-            return true;
-        }
+//        if (item.getItemId() == R.id.action_example) {
+//            Toast.makeText(getActivity(), "Example action.", Toast.LENGTH_SHORT).show();
+//            return true;
+//        }
 
         return super.onOptionsItemSelected(item);
     }

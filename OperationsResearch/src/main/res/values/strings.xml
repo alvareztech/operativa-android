@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Operations Research</string>
+    <string name="app_name">Investigación Operativa</string>
+    <string name="app_name_short">Operativa</string>
+
     <string name="title_section1">Section 1</string>
     <string name="title_section2">Section 2</string>
     <string name="title_section3">Section 3</string>
@@ -26,13 +28,12 @@
     <string name="daniel_alvarez">Daniel Alvarez</string>
 
 
-
-
-
     <string name="numero_esperado_unidades">Número esperado de unidades</string>
 
     <string name="en_sistema">En el sistema</string>
     <string name="en_cola">En la cola</string>
+    <string name="estaciones_ocupadas">Estaciones ocupadas</string>
+    <string name="estaciones_desocupadas">Estaciones desocupadas</string>
 
     <string name="tiempo_medio_espera">Tiempo medio de espera</string>
 
@@ -60,5 +61,15 @@
     <!-- Credits -->
 
     <string name="credits">Créditos</string>
+    <string name="requested">Requerido</string>
+    <string name="tasa_media_filtraje">Tasa media de filtraje</string>
+    <string name="information">Información</string>
+    <string name="github">GitHub</string>
+    <string name="credits_content">\"Operations Research\" es un proyecto abierto que pretende abarcar todos los modelos de Teoría de Colas, Inventarios, conversor de unidades y otros dentro la Investigación Operativa. Para poder incrementar funciones y mejorar el producto dame a conocer tu interés, sugerencias y así colaborar en el desarrollo.</string>
+    <string name="enviame_correo">Enviar correo</string>
+    <string name="seguir_twitter">Seguir en Twitter</string>
+    <string name="proyecto_github">Proyecto en GitHub</string>
+    <string name="ir_web">Ir a la web</string>
+    <string name="mi_web">www.danyalvarez.com</string>
 
 </resources>

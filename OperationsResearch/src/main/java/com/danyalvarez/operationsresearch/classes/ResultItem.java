@@ -15,11 +15,14 @@ public class ResultItem implements Parcelable {
     private String description;
     private String result;
 
+    private int idEquationImage;
+
     public ResultItem() {
         this.titleSection = "";
         this.idIcon = 0;
         this.description = "";
         this.result = "";
+        this.idEquationImage = 0;
     }
 
     public ResultItem(String titleSection, int idIcon, String description, String result) {
@@ -27,6 +30,24 @@ public class ResultItem implements Parcelable {
         this.idIcon = idIcon;
         this.description = description;
         this.result = result;
+        this.idEquationImage = 0;
+    }
+
+
+    public ResultItem(String titleSection, int idIcon, String description, String result, int idEquationImage) {
+        this.titleSection = titleSection;
+        this.idIcon = idIcon;
+        this.description = description;
+        this.result = result;
+        this.idEquationImage = idEquationImage;
+    }
+
+    public ResultItem(int idIcon, String description, String result, int idEquationImage) {
+        this.titleSection = "";
+        this.idIcon = idIcon;
+        this.description = description;
+        this.result = result;
+        this.idEquationImage = idEquationImage;
     }
 
     public ResultItem(int idIcon, String description, String result) {
@@ -34,6 +55,7 @@ public class ResultItem implements Parcelable {
         this.idIcon = idIcon;
         this.description = description;
         this.result = result;
+        this.idEquationImage = 0;
     }
 
     public String getTitleSection() {
@@ -68,6 +90,13 @@ public class ResultItem implements Parcelable {
         this.result = result;
     }
 
+    public int getIdEquationImage() {
+        return idEquationImage;
+    }
+
+    public void setIdEquationImage(int idEquationImage) {
+        this.idEquationImage = idEquationImage;
+    }
 
     @Override
     public int describeContents() {
@@ -80,6 +109,7 @@ public class ResultItem implements Parcelable {
         dest.writeInt(idIcon);
         dest.writeString(description);
         dest.writeString(result);
+        dest.writeInt(idEquationImage);
     }
 
 
@@ -91,6 +121,7 @@ public class ResultItem implements Parcelable {
             resultItem.idIcon = in.readInt();
             resultItem.description = in.readString();
             resultItem.result = in.readString();
+            resultItem.idEquationImage = in.readInt();
             return resultItem;
         }
 

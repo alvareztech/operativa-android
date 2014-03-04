@@ -44,16 +44,16 @@ public class MainActivity extends ActionBarActivity implements NavigationDrawerF
             case 0:
                 fragment = new OptionsFragment(this);
                 break;
+//            case 1:
+//                fragment = new InventoriesFragment(this);
+//                break;
+//            case 2:
+//                fragment = new ConverterFragment(this);
+//                break;
+//            case 3:
+//                fragment = new ConfigurationFragment(this);
+//                break;
             case 1:
-                fragment = new InventoriesFragment(this);
-                break;
-            case 2:
-                fragment = new ConverterFragment(this);
-                break;
-            case 3:
-                fragment = new ConfigurationFragment(this);
-                break;
-            case 4:
                 fragment = new CreditsFragment(this);
                 break;
         }
@@ -69,17 +69,17 @@ public class MainActivity extends ActionBarActivity implements NavigationDrawerF
             case 1:
                 mTitle = getString(R.string.queuing_theory);
                 break;
+//            case 2:
+//                mTitle = getString(R.string.inventories);
+//                break;
+//            case 3:
+//                mTitle = getString(R.string.converter);
+//                break;
+//            case 4:
+//                mTitle = getString(R.string.configuration);
+//                break;
             case 2:
-                mTitle = getString(R.string.inventories);
-                break;
-            case 3:
-                mTitle = getString(R.string.converter);
-                break;
-            case 4:
-                mTitle = getString(R.string.configuration);
-                break;
-            case 5:
-                mTitle = getString(R.string.credits);
+                mTitle = getString(R.string.information);
                 break;
         }
     }
@@ -111,9 +111,9 @@ public class MainActivity extends ActionBarActivity implements NavigationDrawerF
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-        if (id == R.id.action_settings) {
-            return true;
-        }
+//        if (id == R.id.action_settings) {
+//            return true;
+//        }
         return super.onOptionsItemSelected(item);
     }
 
