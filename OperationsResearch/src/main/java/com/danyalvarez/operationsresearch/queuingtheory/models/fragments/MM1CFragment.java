@@ -15,6 +15,7 @@ import com.danyalvarez.operationsresearch.queuingtheory.QueuingTheory;
 import com.danyalvarez.operationsresearch.queuingtheory.models.MM1CModel;
 import com.danyalvarez.operationsresearch.queuingtheory.models.MM1Model;
 import com.danyalvarez.operationsresearch.util.Format;
+import com.danyalvarez.operationsresearch.util.Util;
 
 import java.util.ArrayList;
 
@@ -23,16 +24,9 @@ import java.util.ArrayList;
  */
 public class MM1CFragment extends Fragment {
 
-    private Context mContext;
-
     private EditText mTasaLlegadasEditText;
     private EditText mTasaServicioEditText;
     private EditText mTamanoPoblacionEditText;
-
-
-    public MM1CFragment(Context mContext) {
-        this.mContext = mContext;
-    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -69,7 +63,13 @@ public class MM1CFragment extends Fragment {
         int tamanoPoblacion = Integer.parseInt(tamanoPoblacionStr);
 
         MM1CModel mm1c = new MM1CModel(tasaLlegadas, tasaServicio, tamanoPoblacion);
-        mm1c.calculate();
+        int response = mm1c.calculate();
+        if (response != QueuingTheory.SUCCESSFUL_CALCULATION) {
+            if (response == QueuingTheory.ERROR_POPULATION_SIZE) {
+                Util.showErrorMessage(getActivity(), R.string.error_population_size);
+            }
+            return;
+        }
 
         ArrayList<ResultItem> data = new ArrayList<ResultItem>();
         data.add(new ResultItem(R.drawable.lamda, getString(R.string.tasa_de_llegadas), Format.numberTwoDecimals(tasaLlegadas)));

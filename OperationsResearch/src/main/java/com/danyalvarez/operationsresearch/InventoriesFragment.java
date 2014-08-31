@@ -18,12 +18,7 @@ import com.danyalvarez.operationsresearch.adapters.lists.OptionListAdapter;
 
 public class InventoriesFragment extends Fragment {
 
-    private Context mContext;
     private OptionListAdapter mListAdapter;
-
-    public InventoriesFragment(Context mContext) {
-        this.mContext = mContext;
-    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {

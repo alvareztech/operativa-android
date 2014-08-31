@@ -42,7 +42,7 @@ public class MainActivity extends ActionBarActivity implements NavigationDrawerF
 
         switch (position) {
             case 0:
-                fragment = new OptionsFragment(this);
+                fragment = new OptionsFragment();
                 break;
 //            case 1:
 //                fragment = new InventoriesFragment(this);
@@ -54,7 +54,7 @@ public class MainActivity extends ActionBarActivity implements NavigationDrawerF
 //                fragment = new ConfigurationFragment(this);
 //                break;
             case 1:
-                fragment = new CreditsFragment(this);
+                fragment = new CreditsFragment();
                 break;
         }
 

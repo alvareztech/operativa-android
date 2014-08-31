@@ -17,10 +17,10 @@ import com.danyalvarez.operationsresearch.adapters.lists.OptionListAdapter;
 
 public class ConfigurationFragment extends ListFragment {
 
-    private Context mContext;
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
 
-    public ConfigurationFragment(Context mContext) {
-        this.mContext = mContext;
     }
 
     @Override

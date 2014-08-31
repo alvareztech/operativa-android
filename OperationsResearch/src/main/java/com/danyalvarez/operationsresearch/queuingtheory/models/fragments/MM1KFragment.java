@@ -1,13 +1,19 @@
 package com.danyalvarez.operationsresearch.queuingtheory.models.fragments;
 
+import android.app.AlertDialog;
+import android.app.Dialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.ImageView;
+
 import com.danyalvarez.operationsresearch.R;
 import com.danyalvarez.operationsresearch.ResultsActivity;
 import com.danyalvarez.operationsresearch.classes.ResultItem;
@@ -15,6 +21,7 @@ import com.danyalvarez.operationsresearch.queuingtheory.QueuingTheory;
 import com.danyalvarez.operationsresearch.queuingtheory.models.MM1CModel;
 import com.danyalvarez.operationsresearch.queuingtheory.models.MM1KModel;
 import com.danyalvarez.operationsresearch.util.Format;
+import com.danyalvarez.operationsresearch.util.Util;
 
 import java.util.ArrayList;
 
@@ -23,15 +30,9 @@ import java.util.ArrayList;
  */
 public class MM1KFragment extends Fragment {
 
-    private Context mContext;
-
     private EditText mTasaLlegadasEditText;
     private EditText mTasaServicioEditText;
     private EditText mLimiteSistemaEditText;
-
-    public MM1KFragment(Context mContext) {
-        this.mContext = mContext;
-    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -68,7 +69,14 @@ public class MM1KFragment extends Fragment {
         int limiteSistema = Integer.parseInt(limiteSistemaStr);
 
         MM1KModel mm1k = new MM1KModel(tasaLlegadas, tasaServicio, limiteSistema);
-        mm1k.calculate();
+        int response = mm1k.calculate();
+        if (response != QueuingTheory.SUCCESSFUL_CALCULATION) {
+            if (response == QueuingTheory.ERROR_LIMIT_SYSTEM) {
+                Util.showErrorMessage(getActivity(), R.string.error_limit_system);
+            }
+            return;
+        }
+
 
         ArrayList<ResultItem> data = new ArrayList<ResultItem>();
         data.add(new ResultItem(R.drawable.lamda, getString(R.string.tasa_de_llegadas), Format.numberTwoDecimals(tasaLlegadas)));
@@ -113,4 +121,6 @@ public class MM1KFragment extends Fragment {
         intent.putParcelableArrayListExtra("data", data);
         startActivity(intent);
     }
+
+
 }

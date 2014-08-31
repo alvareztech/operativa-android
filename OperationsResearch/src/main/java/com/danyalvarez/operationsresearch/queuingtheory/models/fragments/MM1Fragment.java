@@ -22,14 +22,8 @@ import java.util.ArrayList;
  */
 public class MM1Fragment extends Fragment {
 
-    private Context mContext;
-
     private EditText mTasaLlegadasEditText;
     private EditText mTasaServicioEditText;
-
-    public MM1Fragment(Context mContext) {
-        this.mContext = mContext;
-    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {

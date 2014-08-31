@@ -1,5 +1,6 @@
 package com.danyalvarez.operationsresearch.queuingtheory.models;
 
+import com.danyalvarez.operationsresearch.queuingtheory.QueuingTheory;
 import com.danyalvarez.operationsresearch.util.C;
 
 /**
@@ -31,25 +32,29 @@ public class MMSModel {
         this.Pn = new double[8];
     }
 
-    public void calculate() {
-        rho = lamda / (mu * S);
+    public int calculate() {
+        if (S < C.fact.length) {
 
-        LO = S * rho;
-        LD = S - LO;
+            rho = lamda / (mu * S);
 
-        Pn[0] = P0();
-        for (int i = 1; i < Pn.length; i++) {
-            Pn[i] = Pn(i);
+            LO = S * rho;
+            LD = S - LO;
+
+            Pn[0] = P0();
+            for (int i = 1; i < Pn.length; i++) {
+                Pn[i] = Pn(i);
+            }
+
+            Lq = rho * (Pn[0] * Math.pow(lamda / mu, S)) / (C.fact[S] * (1.0D - rho) * (1.0D - rho));
+
+            L = Lq + LO;
+
+            W = L / lamda;
+            Wq = Lq / lamda;
+            return QueuingTheory.SUCCESSFUL_CALCULATION;
+        } else {
+            return QueuingTheory.ERROR_SERVICE_CHANNELS;
         }
-
-        Lq = rho * (Pn[0] * Math.pow(lamda / mu, S)) / (C.fact[S] * (1.0D - rho) * (1.0D - rho));
-
-        L = Lq + LO;
-
-        W = L / lamda;
-        Wq = Lq / lamda;
-
-
     }
 
     public double P0() {

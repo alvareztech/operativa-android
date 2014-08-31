@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Investigación Operativa</string>
+    <string name="app_name">Operativa</string>
     <string name="app_name_short">Operativa</string>
 
     <string name="title_section1">Section 1</string>
@@ -18,33 +18,34 @@
 
     <!-- Queuing Theory -->
 
-    <string name="queuing_theory">Teoría de Colas</string>
+    <string name="queuing_theory">Queuing Theory</string>
 
-    <string name="tasa_de_llegadas">Tasa de llegadas</string>
-    <string name="tasa_de_servicio">Tasa de servicio</string>
-    <string name="numero_de_canales_de_servicio">Número de canales de servicio</string>
-    <string name="tamano_de_la_poblacion">Tamaño de la población</string>
-    <string name="limite_del_sistema">Límite del sistema</string>
+    <string name="tasa_de_llegadas">Arrival rate</string>
+    <string name="tasa_de_servicio">Service rate</string>
+    <string name="numero_de_canales_de_servicio">Number of service channels</string>
+    <string name="tamano_de_la_poblacion">Population size</string>
+    <string name="limite_del_sistema">System limit</string>
+
     <string name="daniel_alvarez">Daniel Alvarez</string>
 
 
-    <string name="numero_esperado_unidades">Número esperado de unidades</string>
+    <string name="numero_esperado_unidades">Expected number of units</string>
 
-    <string name="en_sistema">En el sistema</string>
-    <string name="en_cola">En la cola</string>
-    <string name="estaciones_ocupadas">Estaciones ocupadas</string>
-    <string name="estaciones_desocupadas">Estaciones desocupadas</string>
+    <string name="en_sistema">In system</string>
+    <string name="en_cola">In the queue</string>
+    <string name="estaciones_ocupadas">stations occupied</string>
+    <string name="estaciones_desocupadas">Unoccupied stations</string>
 
-    <string name="tiempo_medio_espera">Tiempo medio de espera</string>
+    <string name="tiempo_medio_espera">Average waiting time</string>
 
 
-    <string name="probabilidades">PROBABILIDADES</string>
-    <string name="encontrar_sistema_ocupado">Encontrar el sistema ocupado</string>
-    <string name="sistema_vacio_oscioso">Encontrar el sistema vacio u oscioso</string>
+    <string name="probabilidades">PROBABILITIES</string>
+    <string name="encontrar_sistema_ocupado">Find the system busy</string>
+    <string name="sistema_vacio_oscioso">Find the vacuum system or oscioso</string>
 
-    <string name="encontrar_">Encontrar&#160;</string>
-    <string name="_unidad_en_sistema">&#160;unidad en el sistema</string>
-    <string name="_unidades_en_sistema">&#160;unidades en el sistema</string>
+    <string name="encontrar_">Find&#160;</string>
+    <string name="_unidad_en_sistema">&#160;unit in the system</string>
+    <string name="_unidades_en_sistema">&#160;units in the system</string>
 
     <!-- Inventories -->
 
@@ -60,16 +61,37 @@
 
     <!-- Credits -->
 
-    <string name="credits">Créditos</string>
-    <string name="requested">Requerido</string>
-    <string name="tasa_media_filtraje">Tasa media de filtraje</string>
-    <string name="information">Información</string>
+    <string name="credits">Credits</string>
+    <string name="requested">Required</string>
+    <string name="tasa_media_filtraje">Average rate of filtration</string>
+    <string name="information">Information</string>
     <string name="github">GitHub</string>
-    <string name="credits_content">\"Operations Research\" es un proyecto abierto que pretende abarcar todos los modelos de Teoría de Colas, Inventarios, conversor de unidades y otros dentro la Investigación Operativa. Para poder incrementar funciones y mejorar el producto dame a conocer tu interés, sugerencias y así colaborar en el desarrollo.</string>
-    <string name="enviame_correo">Enviar correo</string>
-    <string name="seguir_twitter">Seguir en Twitter</string>
-    <string name="proyecto_github">Proyecto en GitHub</string>
-    <string name="ir_web">Ir a la web</string>
+    <string name="credits_content">\"Operativa\" is an open project that aims to cover all models of Queuing Theory, Inventory, and other unit converter in Operations Research. In order to increase and improve the product functions to give me know your interest, suggestions and thus collaborate in development.</string>
+    <string name="enviame_correo">Send Mail</string>
+    <string name="seguir_twitter">Follow on Twitter</string>
+    <string name="proyecto_github">Project on GitHub</string>
+    <string name="ir_web">Visit website</string>
     <string name="mi_web">www.danyalvarez.com</string>
+
+    <!--Errores-->
+
+    <string name="error_limit_system">The system boundary is too large for the calculation.</string>
+    <string name="error_calculating">Failed to calculate.</string>
+    <string name="error_service_channels">The number of service channels is very high.</string>
+    <string name="error_population_size">The population size is very large.</string>
+
+    <!--Results-->
+
+    <string name="results">Results</string>
+
+    <!--Models-->
+
+    <string name="models">MODELS</string>
+    <string name="mm1_desc">Population infinite, infinite capacity system, a service channel</string>
+    <string name="mms_desc">Population infinite, infinite capacity system S service channels</string>
+    <string name="mm1c_desc">Population size C, the infinite capacity system, a service channel</string>
+    <string name="mmsc_desc">Population size C, the infinite capacity system S service channels</string>
+    <string name="mm1k_desc">Infinite population, limited system capacity K, a channel service</string>
+    <string name="mmsk_desc">Infinite population, limited system capacity K, S service channels</string>
 
 </resources>

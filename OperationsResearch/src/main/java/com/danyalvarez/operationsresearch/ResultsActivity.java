@@ -74,7 +74,7 @@ public class ResultsActivity extends ActionBarActivity implements AdapterView.On
         }
 
         actionBar.setSubtitle(title);
-        actionBar.setTitle("Resultados");
+        actionBar.setTitle(R.string.results);
     }
 
     private void addItems() {

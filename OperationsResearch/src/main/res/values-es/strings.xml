@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Operativa</string>
+    <string name="app_name_short">Operativa</string>
+
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_example">Example action</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_input_model">Input Model Activity</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="calculate">Calcular</string>
+    <string name="title_activity_results">ResultsActivity</string>
+
+    <!-- Queuing Theory -->
+
+    <string name="queuing_theory">Teoría de Colas</string>
+
+    <string name="tasa_de_llegadas">Tasa de llegadas</string>
+    <string name="tasa_de_servicio">Tasa de servicio</string>
+    <string name="numero_de_canales_de_servicio">Número de canales de servicio</string>
+    <string name="tamano_de_la_poblacion">Tamaño de la población</string>
+    <string name="limite_del_sistema">Límite del sistema</string>
+    <string name="daniel_alvarez">Daniel Alvarez</string>
+
+
+    <string name="numero_esperado_unidades">Número esperado de unidades</string>
+
+    <string name="en_sistema">En el sistema</string>
+    <string name="en_cola">En la cola</string>
+    <string name="estaciones_ocupadas">Estaciones ocupadas</string>
+    <string name="estaciones_desocupadas">Estaciones desocupadas</string>
+
+    <string name="tiempo_medio_espera">Tiempo medio de espera</string>
+
+
+    <string name="probabilidades">PROBABILIDADES</string>
+    <string name="encontrar_sistema_ocupado">Encontrar el sistema ocupado</string>
+    <string name="sistema_vacio_oscioso">Encontrar el sistema vacio u oscioso</string>
+
+    <string name="encontrar_">Encontrar&#160;</string>
+    <string name="_unidad_en_sistema">&#160;unidad en el sistema</string>
+    <string name="_unidades_en_sistema">&#160;unidades en el sistema</string>
+
+    <!-- Inventories -->
+
+    <string name="inventories">Inventarios</string>
+
+    <!-- Converter -->
+
+    <string name="converter">Conversor</string>
+
+    <!-- Configuration -->
+
+    <string name="configuration">Configuración</string>
+
+    <!-- Credits -->
+
+    <string name="credits">Créditos</string>
+    <string name="requested">Requerido</string>
+    <string name="tasa_media_filtraje">Tasa media de filtraje</string>
+    <string name="information">Información</string>
+    <string name="github">GitHub</string>
+    <string name="credits_content">\"Operations Research\" es un proyecto abierto que pretende abarcar todos los modelos de Teoría de Colas, Inventarios, conversor de unidades y otros dentro la Investigación Operativa. Para poder incrementar funciones y mejorar el producto dame a conocer tu interés, sugerencias y así colaborar en el desarrollo.</string>
+    <string name="enviame_correo">Enviar correo</string>
+    <string name="seguir_twitter">Seguir en Twitter</string>
+    <string name="proyecto_github">Proyecto en GitHub</string>
+    <string name="ir_web">Ir a la web</string>
+    <string name="mi_web">www.danyalvarez.com</string>
+    <string name="error_limit_system">El límite del sistema es demasiado grande para el cálculo.</string>
+    <string name="error_calculating">Error al calcular</string>
+    <string name="error_service_channels">El número de canales de servicio es muy alto.</string>
+    <string name="error_population_size">El tamaño de la población es muy grande.</string>
+
+
+    <!--Results-->
+
+    <string name="results">Resultados</string>
+
+    <!--Models-->
+
+    <string name="models">MODELOS</string>
+    <string name="mm1_desc">Población infinita, capacidad del sistema infinito, un canal de servicio</string>
+    <string name="mms_desc">Población infinita, capacidad del sistema infinito, S canales de servicio</string>
+    <string name="mm1c_desc">Población de tamaño C, capacidad del sistema infinito, un canal de servicio</string>
+    <string name="mmsc_desc">Población de tamaño C, capacidad del sistema infinito, S canales de servicio</string>
+    <string name="mm1k_desc">Población infinita, capacidad del sistema limitado a K, un canal de servicio</string>
+    <string name="mmsk_desc">Población infinita, capacidad del sistema limitado a K, S canales de servicio</string>
+</resources>

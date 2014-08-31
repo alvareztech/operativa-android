@@ -15,6 +15,7 @@ import com.danyalvarez.operationsresearch.queuingtheory.QueuingTheory;
 import com.danyalvarez.operationsresearch.queuingtheory.models.MM1KModel;
 import com.danyalvarez.operationsresearch.queuingtheory.models.MMSKModel;
 import com.danyalvarez.operationsresearch.util.Format;
+import com.danyalvarez.operationsresearch.util.Util;
 
 import java.util.ArrayList;
 
@@ -23,16 +24,10 @@ import java.util.ArrayList;
  */
 public class MMSKFragment extends Fragment {
 
-    private Context mContext;
-
     private EditText mTasaLlegadasEditText;
     private EditText mTasaServicioEditText;
     private EditText mCanalesServicioEditText;
     private EditText mLimiteSistemaEditText;
-
-    public MMSKFragment(Context mContext) {
-        this.mContext = mContext;
-    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -73,7 +68,13 @@ public class MMSKFragment extends Fragment {
         int limiteSistema = Integer.parseInt(limiteSistemaStr);
 
         MMSKModel mmsk = new MMSKModel(tasaLlegadas, tasaServicio, canalesServicio, limiteSistema);
-        mmsk.calculate();
+        int response = mmsk.calculate();
+        if (response != QueuingTheory.SUCCESSFUL_CALCULATION) {
+            if (response == QueuingTheory.ERROR_SERVICE_CHANNELS) {
+                Util.showErrorMessage(getActivity(), R.string.error_service_channels);
+            }
+            return;
+        }
 
         ArrayList<ResultItem> data = new ArrayList<ResultItem>();
         data.add(new ResultItem(R.drawable.lamda, getString(R.string.tasa_de_llegadas), Format.numberTwoDecimals(tasaLlegadas)));

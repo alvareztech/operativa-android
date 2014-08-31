@@ -1,5 +1,9 @@
 package com.danyalvarez.operationsresearch.queuingtheory.models;
 
+import android.util.Log;
+
+import com.danyalvarez.operationsresearch.queuingtheory.QueuingTheory;
+
 /**
  * Created by daniel on 03/03/14.
  */
@@ -28,7 +32,7 @@ public class MM1KModel {
         this.Pn = new double[8];
     }
 
-    public void calculate() {
+    public int calculate() {
         rho = lamda / mu;
 
         for (int i = 0; i < Pn.length; i++) {
@@ -38,10 +42,16 @@ public class MM1KModel {
         L = L();
         Lq = L - (1 - Pn[0]);
 
-        lamdax = lamda * (1.0D - Pn[K]);
+        if (K < 8) {
+            lamdax = lamda * (1.0D - Pn[K]);
+        } else {
+            return QueuingTheory.ERROR_LIMIT_SYSTEM;
+        }
 
         W = L / lamdax;
         Wq = W - 1.0D / mu;
+
+        return QueuingTheory.SUCCESSFUL_CALCULATION;
     }
 
     public double Pn(int n) {

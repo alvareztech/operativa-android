@@ -15,6 +15,7 @@ import com.danyalvarez.operationsresearch.queuingtheory.QueuingTheory;
 import com.danyalvarez.operationsresearch.queuingtheory.models.MM1Model;
 import com.danyalvarez.operationsresearch.queuingtheory.models.MMSModel;
 import com.danyalvarez.operationsresearch.util.Format;
+import com.danyalvarez.operationsresearch.util.Util;
 
 import java.util.ArrayList;
 
@@ -23,15 +24,9 @@ import java.util.ArrayList;
  */
 public class MMSFragment extends Fragment {
 
-    private Context mContext;
-
     private EditText mTasaLlegadasEditText;
     private EditText mTasaServicioEditText;
     private EditText mCanalesServicioEditText;
-
-    public MMSFragment(Context mContext) {
-        this.mContext = mContext;
-    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -70,7 +65,13 @@ public class MMSFragment extends Fragment {
         int canalesServicio = Integer.parseInt(canalesServicioStr);
 
         MMSModel mms = new MMSModel(tasaLlegadas, tasaServicio, canalesServicio);
-        mms.calculate();
+        int response = mms.calculate();
+        if (response != QueuingTheory.SUCCESSFUL_CALCULATION) {
+            if (response == QueuingTheory.ERROR_SERVICE_CHANNELS) {
+                Util.showErrorMessage(getActivity(), R.string.error_service_channels);
+            }
+            return;
+        }
 
         ArrayList<ResultItem> data = new ArrayList<ResultItem>();
         data.add(new ResultItem(R.drawable.lamda, getString(R.string.tasa_de_llegadas), Format.numberTwoDecimals(tasaLlegadas)));

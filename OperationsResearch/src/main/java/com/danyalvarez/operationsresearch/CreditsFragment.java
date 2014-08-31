@@ -21,16 +21,12 @@ import org.apache.http.protocol.HTTP;
 
 public class CreditsFragment extends Fragment {
 
-    private Context mContext;
     private OptionListAdapter mListAdapter;
 
     private Button mEnviarCorreoButton;
     private Button mIrWebButton;
     private Button mIrGitHubButton;
 
-    public CreditsFragment(Context mContext) {
-        this.mContext = mContext;
-    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -54,7 +50,7 @@ public class CreditsFragment extends Fragment {
                 Intent intentCorreo = new Intent(Intent.ACTION_SEND);
                 intentCorreo.setType(HTTP.PLAIN_TEXT_TYPE);
                 intentCorreo.putExtra(Intent.EXTRA_EMAIL, new String[] { "i@danyalvarez.com" });
-                intentCorreo.putExtra(Intent.EXTRA_SUBJECT, "Operations Research");
+                intentCorreo.putExtra(Intent.EXTRA_SUBJECT, R.string.app_name);
                 intentCorreo.putExtra(Intent.EXTRA_TEXT, "");
                 startActivity(intentCorreo);
 

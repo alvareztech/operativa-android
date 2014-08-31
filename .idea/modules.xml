@@ -3,7 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/OperationsResearch.iml" filepath="$PROJECT_DIR$/OperationsResearch.iml" />
-      <module fileurl="file://$PROJECT_DIR$/OperationsResearch/OperationsResearch-OperationsResearch.iml" filepath="$PROJECT_DIR$/OperationsResearch/OperationsResearch-OperationsResearch.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OperationsResearch-Android.iml" filepath="$PROJECT_DIR$/OperationsResearch-Android.iml" />
     </modules>
   </component>
 </project>
