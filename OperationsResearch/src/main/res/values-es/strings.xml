@@ -70,7 +70,7 @@
     <string name="seguir_twitter">Seguir en Twitter</string>
     <string name="proyecto_github">Proyecto en GitHub</string>
     <string name="ir_web">Ir a la web</string>
-    <string name="mi_web">www.danyalvarez.com</string>
+    <string name="mi_web">alvarez.tech</string>
     <string name="error_limit_system">El límite del sistema es demasiado grande para el cálculo.</string>
     <string name="error_calculating">Error al calcular</string>
     <string name="error_service_channels">El número de canales de servicio es muy alto.</string>
