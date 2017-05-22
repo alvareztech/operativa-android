@@ -95,4 +95,7 @@
     <string name="mmsk_desc">Infinite population, limited system capacity K, S service channels</string>
     <string name="single_formula">$\\int_0^\\infty e^{-x^5} dx=\\frac{\\sqrt{\\pi}}{2}$</string>
 
+    <string name="lambda">$\\lambda$</string>
+    <string name="mu">$\\mu$</string>
+
 </resources>

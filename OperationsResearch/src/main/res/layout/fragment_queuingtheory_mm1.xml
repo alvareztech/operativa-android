@@ -1,45 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/normal_size">
+        android:layout_width="match_parent"
+        android:layout_height="48dp">
 
         <ImageView
-                style="@style/Icon.Right"
-                android:src="@drawable/lamda"/>
+            style="@style/Icon.Right"
+            android:src="@drawable/lamda" />
 
         <TextView
-                style="@style/FormText.Center"
-                android:text="@string/tasa_de_llegadas"/>
+            style="@style/FormText.Center"
+            android:text="@string/tasa_de_llegadas" />
 
         <EditText
-                android:id="@+id/tasaLlegadasEditText"
-                style="@style/FormEditText.Left"
-                android:inputType="numberDecimal"/>
+            android:id="@+id/tasaLlegadasEditText"
+            style="@style/FormEditText.Left"
+            android:inputType="numberDecimal" />
 
     </LinearLayout>
 
     <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/normal_size">
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/normal_size">
 
         <ImageView
-                style="@style/Icon.Right"
-                android:src="@drawable/mu"/>
+            style="@style/Icon.Right"
+            android:src="@drawable/mu" />
 
         <TextView
-                style="@style/FormText.Center"
-                android:text="@string/tasa_de_servicio"/>
+            style="@style/FormText.Center"
+            android:text="@string/tasa_de_servicio" />
 
         <EditText
-                android:id="@+id/tasaServicioEditText"
-                style="@style/FormEditText.Left"
-                android:inputType="numberDecimal"/>
+            android:id="@+id/tasaServicioEditText"
+            style="@style/FormEditText.Left"
+            android:inputType="numberDecimal" />
 
     </LinearLayout>
 
