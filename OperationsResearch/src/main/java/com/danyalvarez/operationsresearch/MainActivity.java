@@ -1,38 +1,57 @@
 package com.danyalvarez.operationsresearch;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ListView;
 
-import com.danyalvarez.operationsresearch.queuingtheory.OptionsFragment;
+import com.danyalvarez.operationsresearch.adapters.lists.OptionListAdapter;
 
-public class MainActivity extends AppCompatActivity implements NavigationDrawerFragment.NavigationDrawerCallbacks {
+public class MainActivity extends AppCompatActivity {
+
+    private OptionListAdapter mListAdapter;
+    private ListView cardsListView;
+
+    private String[] titles = {"M/M/1", "M/M/S", "M/M/1/C", "M/M/S/C", "M/M/1/K", "M/M/S/K"};
+    private int[] descriptions = {
+            R.string.mm1_desc,
+            R.string.mms_desc,
+            R.string.mm1c_desc,
+            R.string.mmsc_desc,
+            R.string.mm1k_desc,
+            R.string.mmsk_desc
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-    }
 
-    @Override
-    public void onNavigationDrawerItemSelected(int position) {
+        cardsListView = (ListView) findViewById(R.id.cardsListView);
+        cardsListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(MainActivity.this, InputModelActivity.class);
+                intent.putExtra("title", titles[position]);
+                intent.putExtra("model", (int) (id + 1));
 
-        Fragment fragment = null;
+                startActivity(intent);
+            }
+        });
 
-        switch (position) {
-            case 0:
-                fragment = new OptionsFragment();
-                break;
-            case 1:
-                fragment = new CreditsFragment();
-                break;
+        mListAdapter = new OptionListAdapter(this);
+        for (int i = 0; i < titles.length; i++) {
+            if (i == 0) {
+                mListAdapter.addItem(getString(R.string.models), titles[i], getString(descriptions[i]));
+            } else {
+                mListAdapter.addItem(titles[i], getString(descriptions[i]));
+            }
         }
-
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        fragmentManager.beginTransaction().replace(R.id.container, fragment).commit();
+        cardsListView.setAdapter(mListAdapter);
     }
 
     @Override

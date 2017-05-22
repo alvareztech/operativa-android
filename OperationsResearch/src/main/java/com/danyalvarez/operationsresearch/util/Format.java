@@ -4,9 +4,6 @@ import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-/**
- * Created by daniel on 03/03/14.
- */
 public class Format {
 
     public static final String TWO_DECIMALS_NUMBER_FORMAT = "###,###,##0.00";
