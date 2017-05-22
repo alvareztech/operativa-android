@@ -42,7 +42,7 @@ public class CreditsFragment extends Fragment {
 
                 Intent intentCorreo = new Intent(Intent.ACTION_SEND);
                 intentCorreo.setType("text/plain");
-                intentCorreo.putExtra(Intent.EXTRA_EMAIL, new String[]{"i@danyalvarez.com"});
+                intentCorreo.putExtra(Intent.EXTRA_EMAIL, new String[]{"daniel@alvarez.tech"});
                 intentCorreo.putExtra(Intent.EXTRA_SUBJECT, R.string.app_name);
                 intentCorreo.putExtra(Intent.EXTRA_TEXT, "");
                 startActivity(intentCorreo);
@@ -53,7 +53,7 @@ public class CreditsFragment extends Fragment {
         mIrWebButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Uri paginaWeb = Uri.parse("http://www.danyalvarez.com");
+                Uri paginaWeb = Uri.parse("https://alvarez.tech");
                 Intent intentPaginaWeb = new Intent(Intent.ACTION_VIEW, paginaWeb);
                 startActivity(intentPaginaWeb);
             }
