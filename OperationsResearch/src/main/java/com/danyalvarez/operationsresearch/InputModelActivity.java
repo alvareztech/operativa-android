@@ -4,13 +4,14 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
 import com.danyalvarez.operationsresearch.queuingtheory.QueuingTheory;
 import com.danyalvarez.operationsresearch.queuingtheory.models.fragments.*;
 
-public class InputModelActivity extends ActionBarActivity {
+public class InputModelActivity extends AppCompatActivity {
 
     private int mModel;
 

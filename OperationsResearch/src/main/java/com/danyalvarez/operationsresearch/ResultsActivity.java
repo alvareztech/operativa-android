@@ -6,6 +6,7 @@ import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -20,7 +21,7 @@ import com.danyalvarez.operationsresearch.queuingtheory.QueuingTheory;
 
 import java.util.ArrayList;
 
-public class ResultsActivity extends ActionBarActivity implements AdapterView.OnItemClickListener {
+public class ResultsActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
 
     private ListView mList;
     private ResultsListAdapter mListAdapter;

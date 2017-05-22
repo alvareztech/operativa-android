@@ -31,11 +31,4 @@ public class InventoriesFragment extends Fragment {
         super.onActivityCreated(savedInstanceState);
 
     }
-
-    @Override
-    public void onAttach(Activity activity) {
-        super.onAttach(activity);
-        ((MainActivity) activity).onSectionAttached(2);
-    }
-
 }
