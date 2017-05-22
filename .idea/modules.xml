@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/OperationsResearch.iml" filepath="$PROJECT_DIR$/OperationsResearch.iml" />
-      <module fileurl="file://$PROJECT_DIR$/OperationsResearch-Android.iml" filepath="$PROJECT_DIR$/OperationsResearch-Android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OperationsResearch/OperationsResearch.iml" filepath="$PROJECT_DIR$/OperationsResearch/OperationsResearch.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Operativa.iml" filepath="$PROJECT_DIR$/Operativa.iml" />
     </modules>
   </component>
 </project>
-

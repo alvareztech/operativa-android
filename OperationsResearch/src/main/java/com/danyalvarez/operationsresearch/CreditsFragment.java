@@ -1,23 +1,16 @@
 package com.danyalvarez.operationsresearch;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.ListFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ListView;
-import com.danyalvarez.operationsresearch.adapters.lists.OptionListAdapter;
-import org.apache.http.protocol.HTTP;
 
-/**
- * Created by daniel on 20/02/14.
- */
+import com.danyalvarez.operationsresearch.adapters.lists.OptionListAdapter;
 
 public class CreditsFragment extends Fragment {
 
@@ -48,8 +41,8 @@ public class CreditsFragment extends Fragment {
             public void onClick(View v) {
 
                 Intent intentCorreo = new Intent(Intent.ACTION_SEND);
-                intentCorreo.setType(HTTP.PLAIN_TEXT_TYPE);
-                intentCorreo.putExtra(Intent.EXTRA_EMAIL, new String[] { "i@danyalvarez.com" });
+                intentCorreo.setType("text/plain");
+                intentCorreo.putExtra(Intent.EXTRA_EMAIL, new String[]{"i@danyalvarez.com"});
                 intentCorreo.putExtra(Intent.EXTRA_SUBJECT, R.string.app_name);
                 intentCorreo.putExtra(Intent.EXTRA_TEXT, "");
                 startActivity(intentCorreo);
@@ -83,8 +76,6 @@ public class CreditsFragment extends Fragment {
         super.onAttach(activity);
         ((MainActivity) activity).onSectionAttached(2);
     }
-
-
 
 
 }
