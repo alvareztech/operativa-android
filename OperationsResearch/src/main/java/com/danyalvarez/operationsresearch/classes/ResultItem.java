@@ -1,12 +1,8 @@
 package com.danyalvarez.operationsresearch.classes;
 
-import android.os.Bundle;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-/**
- * Created by daniel on 22/02/14.
- */
 public class ResultItem implements Parcelable {
 
     private String titleSection;

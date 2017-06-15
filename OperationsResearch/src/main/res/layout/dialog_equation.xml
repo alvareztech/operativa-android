@@ -1,21 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:background="#fff"
-
-        >
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
 
     <ImageView
-            android:id="@+id/equationImage"
-            android:layout_width="240dp"
-            android:layout_height="240dp"
-            android:scaleType="centerInside"
-            android:src="@drawable/mm1_wq"
-            android:layout_gravity="center_horizontal"
-            android:padding="@dimen/view_margin"
-            />
+        android:id="@+id/equationImage"
+        android:layout_width="240dp"
+        android:layout_height="240dp"
+        android:layout_gravity="center_horizontal"
+        android:padding="@dimen/view_margin"
+        android:scaleType="centerInside"
+        android:src="@drawable/mm1_wq" />
 
 </LinearLayout>

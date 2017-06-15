@@ -64,7 +64,7 @@
     <string name="seguir_twitter">Follow on Twitter</string>
     <string name="proyecto_github">Project on GitHub</string>
     <string name="ir_web">Visit website</string>
-    <string name="mi_web">alvarez.tech</string>
+    <string name="mi_web" translatable="false">https://alvarez.tech</string>
 
     <!--Errores-->
 

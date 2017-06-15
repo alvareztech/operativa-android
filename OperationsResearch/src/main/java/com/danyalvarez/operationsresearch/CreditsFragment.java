@@ -1,25 +1,18 @@
 package com.danyalvarez.operationsresearch;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
+import android.support.v4.app.DialogFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-import com.danyalvarez.operationsresearch.adapters.lists.OptionListAdapter;
-
-public class CreditsFragment extends Fragment {
-
-    private OptionListAdapter mListAdapter;
+public class CreditsFragment extends DialogFragment {
 
     private Button mEnviarCorreoButton;
     private Button mIrWebButton;
-    private Button mIrGitHubButton;
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -27,7 +20,6 @@ public class CreditsFragment extends Fragment {
 
         mEnviarCorreoButton = (Button) rootView.findViewById(R.id.enviarCorreoButton);
         mIrWebButton = (Button) rootView.findViewById(R.id.irWebButton);
-        mIrGitHubButton = (Button) rootView.findViewById(R.id.irGitHubButton);
 
         return rootView;
     }
@@ -54,16 +46,6 @@ public class CreditsFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Uri paginaWeb = Uri.parse("https://alvarez.tech");
-                Intent intentPaginaWeb = new Intent(Intent.ACTION_VIEW, paginaWeb);
-                startActivity(intentPaginaWeb);
-            }
-        });
-
-        mIrGitHubButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                Uri paginaWeb = Uri.parse("https://github.com/danyalvarez/OperationsResearch-Android");
                 Intent intentPaginaWeb = new Intent(Intent.ACTION_VIEW, paginaWeb);
                 startActivity(intentPaginaWeb);
             }

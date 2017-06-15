@@ -1,8 +1,5 @@
 package com.danyalvarez.operationsresearch.classes;
 
-/**
- * Created by daniel on 20/02/14.
- */
 public class Option {
 
     private String titleSection;

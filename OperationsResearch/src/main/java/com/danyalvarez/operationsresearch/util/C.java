@@ -1,8 +1,5 @@
 package com.danyalvarez.operationsresearch.util;
 
-/**
- * Created by daniel on 03/03/14.
- */
 public class C {
 
     public static final double[] fact = {

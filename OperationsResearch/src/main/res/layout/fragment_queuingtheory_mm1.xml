@@ -10,7 +10,8 @@
         android:layout_height="48dp">
 
         <ImageView
-            style="@style/Icon.Right"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
             android:src="@drawable/lamda" />
 
         <TextView
@@ -29,7 +30,8 @@
         android:layout_height="@dimen/normal_size">
 
         <ImageView
-            style="@style/Icon.Right"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
             android:src="@drawable/mu" />
 
         <TextView
