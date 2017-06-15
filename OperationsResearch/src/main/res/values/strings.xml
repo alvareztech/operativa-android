@@ -2,14 +2,7 @@
 <resources>
 
     <string name="app_name">Operativa</string>
-    <string name="app_name_short">Operativa</string>
 
-    <string name="title_section1">Section 1</string>
-    <string name="title_section2">Section 2</string>
-    <string name="title_section3">Section 3</string>
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="action_example">Example action</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_input_model">Input Model Activity</string>
     <string name="hello_world">Hello world!</string>
@@ -105,5 +98,6 @@
     <string name="settings_probabilities_decimals_default" translatable="false">4</string>
     <string name="settings_probabilities_decimals_key" translatable="false">settings_probabilities_decimals</string>
     <string name="settings_probabilities_decimals_title">Probabilities number of decimals</string>
+    <string name="action_about">About</string>
 
 </resources>

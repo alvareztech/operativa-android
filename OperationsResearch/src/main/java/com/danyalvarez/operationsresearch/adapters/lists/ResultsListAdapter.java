@@ -7,15 +7,12 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+
 import com.danyalvarez.operationsresearch.R;
 import com.danyalvarez.operationsresearch.classes.ResultItem;
-import com.danyalvarez.operationsresearch.util.Format;
 
 import java.util.ArrayList;
 
-/**
- * @author Daniel Alvarez
- */
 public class ResultsListAdapter extends BaseAdapter {
 
     private Context mContext;
@@ -83,10 +80,6 @@ public class ResultsListAdapter extends BaseAdapter {
         this.mData = data;
     }
 
-    /**
-     * ViewHolder static class
-     */
-
     static class ViewHolder {
         ViewGroup sectionViewGroup;
         TextView titleSectionText;
@@ -95,10 +88,6 @@ public class ResultsListAdapter extends BaseAdapter {
         TextView descriptionText;
         TextView resultText;
     }
-
-    /**
-     * Data methods
-     */
 
     public void addItem(int idIcon, String description, String result) {
         mData.add(new ResultItem(idIcon, description, result));
