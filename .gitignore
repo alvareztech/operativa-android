@@ -11,3 +11,4 @@
 /.idea/
 
 gradle.properties
+keystore.properties
