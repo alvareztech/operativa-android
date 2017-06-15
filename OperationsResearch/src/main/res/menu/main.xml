@@ -1,16 +1,19 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.danyalvarez.operationsresearch.MainActivity" >
+    tools:context="com.danyalvarez.operationsresearch.MainActivity">
 
-    <!--<item android:id="@+id/action_example"-->
-        <!--android:title="@string/action_example"-->
-        <!--android:icon="@drawable/ic_action_about"-->
-        <!--app:showAsAction="ifRoom" />-->
+    <item
+        android:id="@+id/action_example"
+        android:icon="@drawable/ic_info"
+        android:title="@string/action_example"
+        app:showAsAction="ifRoom" />
 
-    <!--<item android:id="@+id/action_settings"-->
-        <!--android:title="@string/action_settings"-->
-        <!--android:orderInCategory="100"-->
-        <!--app:showAsAction="never" />-->
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:icon="@drawable/ic_settings"
+        android:title="@string/action_settings"
+        app:showAsAction="ifRoom" />
 
 </menu>
