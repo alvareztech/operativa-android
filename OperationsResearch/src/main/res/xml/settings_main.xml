@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ListPreference
+        android:defaultValue="@string/settings_decimals_default"
+        android:entries="@array/settings_decimals_entries"
+        android:entryValues="@array/settings_decimals_entries"
+        android:key="@string/settings_decimals_key"
+        android:title="@string/settings_decimals_title" />
+
+    <ListPreference
+        android:defaultValue="@string/settings_probabilities_decimals_default"
+        android:entries="@array/settings_probabilities_decimals_entries"
+        android:entryValues="@array/settings_probabilities_decimals_entries"
+        android:key="@string/settings_probabilities_decimals_key"
+        android:title="@string/settings_probabilities_decimals_title" />
+
+</PreferenceScreen>

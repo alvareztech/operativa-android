@@ -98,4 +98,12 @@
     <string name="lambda">$\\lambda$</string>
     <string name="mu">$\\mu$</string>
 
+    <string name="settings_decimals_title">Number of decimals</string>
+    <string name="settings_decimals_key" translatable="false">settings_decimals</string>
+    <string name="settings_decimals_default" translatable="false">2</string>
+
+    <string name="settings_probabilities_decimals_default" translatable="false">4</string>
+    <string name="settings_probabilities_decimals_key" translatable="false">settings_probabilities_decimals</string>
+    <string name="settings_probabilities_decimals_title">Probabilities number of decimals</string>
+
 </resources>
