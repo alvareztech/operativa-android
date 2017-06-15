@@ -1,7 +1,9 @@
 package com.danyalvarez.operationsresearch.queuingtheory.models.fragments;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -71,8 +73,11 @@ public class MMSKFragment extends Fragment {
             return;
         }
 
-        int decimalNumber = 2;
-        int probabilitiesDecimalNumber = 4;
+        SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(getContext());
+        int decimalNumber = Integer.parseInt(sharedPrefs.getString(getString(R.string.settings_decimals_key),
+                getString(R.string.settings_decimals_default)));
+        int probabilitiesDecimalNumber = Integer.parseInt(sharedPrefs.getString(getString(R.string.settings_probabilities_decimals_key),
+                getString(R.string.settings_probabilities_decimals_default)));
 
         ArrayList<ResultItem> data = new ArrayList<ResultItem>();
         data.add(new ResultItem(R.drawable.lamda, getString(R.string.tasa_de_llegadas), Format.number(tasaLlegadas, decimalNumber)));
