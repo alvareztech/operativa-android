@@ -13,6 +13,7 @@ public class CreditsFragment extends DialogFragment {
 
     private Button mEnviarCorreoButton;
     private Button mIrWebButton;
+    private Button mYoutubeButton;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -20,6 +21,7 @@ public class CreditsFragment extends DialogFragment {
 
         mEnviarCorreoButton = (Button) rootView.findViewById(R.id.enviarCorreoButton);
         mIrWebButton = (Button) rootView.findViewById(R.id.irWebButton);
+        mYoutubeButton = (Button) rootView.findViewById(R.id.youtubeButton);
 
         return rootView;
     }
@@ -48,6 +50,15 @@ public class CreditsFragment extends DialogFragment {
                 Uri paginaWeb = Uri.parse("https://alvarez.tech");
                 Intent intentPaginaWeb = new Intent(Intent.ACTION_VIEW, paginaWeb);
                 startActivity(intentPaginaWeb);
+            }
+        });
+
+        mYoutubeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri uri = Uri.parse("https://www.youtube.com/channel/UCQBP46vtgU0OA91xL2tl-nQ");
+                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                startActivity(intent);
             }
         });
 
