@@ -80,16 +80,20 @@
     <!--Models-->
 
     <string name="models">MODELS</string>
+
+    <string name="mm1" translatable="false">M/M/1</string>
+    <string name="mms" translatable="false">M/M/S</string>
+    <string name="mm1c" translatable="false">M/M/1/C</string>
+    <string name="mmsc" translatable="false">M/M/S/C</string>
+    <string name="mm1k" translatable="false">M/M/1/K</string>
+    <string name="mmsk" translatable="false">M/M/S/K</string>
+
     <string name="mm1_desc">Population infinite, infinite capacity system, a service channel</string>
     <string name="mms_desc">Population infinite, infinite capacity system S service channels</string>
     <string name="mm1c_desc">Population size C, the infinite capacity system, a service channel</string>
     <string name="mmsc_desc">Population size C, the infinite capacity system S service channels</string>
     <string name="mm1k_desc">Infinite population, limited system capacity K, a channel service</string>
     <string name="mmsk_desc">Infinite population, limited system capacity K, S service channels</string>
-    <string name="single_formula">$\\int_0^\\infty e^{-x^5} dx=\\frac{\\sqrt{\\pi}}{2}$</string>
-
-    <string name="lambda">$\\lambda$</string>
-    <string name="mu">$\\mu$</string>
 
     <string name="settings_decimals_title">Number of decimals</string>
     <string name="settings_decimals_key" translatable="false">settings_decimals</string>

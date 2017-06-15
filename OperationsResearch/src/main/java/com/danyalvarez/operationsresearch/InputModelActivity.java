@@ -31,9 +31,26 @@ public class InputModelActivity extends AppCompatActivity {
         actionBar.setDisplayHomeAsUpEnabled(true);
         actionBar.setDisplayShowHomeEnabled(false);
         actionBar.setDisplayShowTitleEnabled(true);
-        actionBar.setTitle(getIntent().getStringExtra("title"));
+        actionBar.setTitle(getTitleOfModel(mModel));
         actionBar.setSubtitle(R.string.queuing_theory);
         actionBar.setDisplayUseLogoEnabled(false);
+    }
+
+    private int getTitleOfModel(int model) {
+        if (model == QueuingTheory.MODEL_MM1) {
+            return R.string.mm1;
+        } else if (model == QueuingTheory.MODEL_MMS) {
+            return R.string.mms;
+        } else if (model == QueuingTheory.MODEL_MM1C) {
+            return R.string.mm1c;
+        } else if (model == QueuingTheory.MODEL_MMSC) {
+            return R.string.mmsc;
+        } else if (model == QueuingTheory.MODEL_MM1K) {
+            return R.string.mm1k;
+        } else if (model == QueuingTheory.MODEL_MMSK) {
+            return R.string.mmsk;
+        }
+        return 0;
     }
 
 

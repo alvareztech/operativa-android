@@ -15,12 +15,14 @@
             android:src="@drawable/lamda" />
 
         <TextView
-            style="@style/FormText.Center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:text="@string/tasa_de_llegadas" />
 
         <EditText
             android:id="@+id/tasaLlegadasEditText"
-            style="@style/FormEditText.Left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:inputType="numberDecimal" />
 
     </LinearLayout>
@@ -35,12 +37,14 @@
             android:src="@drawable/mu" />
 
         <TextView
-            style="@style/FormText.Center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:text="@string/tasa_de_servicio" />
 
         <EditText
             android:id="@+id/tasaServicioEditText"
-            style="@style/FormEditText.Left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:inputType="numberDecimal" />
 
     </LinearLayout>
@@ -55,12 +59,14 @@
             android:src="@drawable/s" />
 
         <TextView
-            style="@style/FormText.Center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:text="@string/numero_de_canales_de_servicio" />
 
         <EditText
             android:id="@+id/canalesServicioEditText"
-            style="@style/FormEditText.Left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:inputType="number" />
 
     </LinearLayout>
@@ -75,12 +81,14 @@
             android:src="@drawable/k" />
 
         <TextView
-            style="@style/FormText.Center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:text="@string/limite_del_sistema" />
 
         <EditText
             android:id="@+id/limiteSistemaEditText"
-            style="@style/FormEditText.Left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:inputType="number" />
 
     </LinearLayout>

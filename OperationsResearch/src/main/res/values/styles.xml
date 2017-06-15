@@ -1,6 +1,6 @@
 <resources>
 
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
@@ -46,11 +46,6 @@
         <item name="android:layout_marginLeft">@dimen/view_margin</item>
     </style>
 
-    <style name="FormText.Center">
-        <item name="android:layout_marginLeft">@dimen/view_margin</item>
-        <item name="android:layout_marginRight">@dimen/view_margin</item>
-    </style>
-
     <!-- Form EditText-->
 
     <style name="FormEditText" parent="android:Widget.EditText">
@@ -63,15 +58,6 @@
         <item name="android:layout_marginLeft">0dp</item>
         <item name="android:layout_marginRight">0dp</item>
     </style>
-
-    <style name="FormEditText.Left">
-        <item name="android:layout_marginLeft">@dimen/view_margin</item>
-    </style>
-
-    <style name="FormEditText.Right">
-        <item name="android:layout_marginRight">@dimen/view_margin</item>
-    </style>
-
 
     <!-- Title Section List -->
     <style name="ListSectionTitle">

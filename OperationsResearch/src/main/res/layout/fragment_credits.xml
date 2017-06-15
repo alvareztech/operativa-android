@@ -13,7 +13,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/credits_content"
-        android:textColor="@color/text_color_secondary_dark"
         android:textSize="@dimen/text_size_small" />
 
     <TextView
@@ -22,16 +21,17 @@
         android:gravity="center"
         android:padding="8dp"
         android:text="@string/daniel_alvarez"
-        android:textColor="@color/text_color_tertiary_dark"
         android:textSize="@dimen/text_size_large" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:fontFamily="monospace"
         android:gravity="center"
         android:padding="8dp"
         android:text="@string/mi_web"
-        android:textSize="@dimen/text_size_medium" />
+        android:textSize="@dimen/text_size_medium"
+        android:typeface="monospace" />
 
     <Button
         android:id="@+id/irWebButton"

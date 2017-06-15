@@ -1,8 +1,5 @@
 package com.danyalvarez.operationsresearch.queuingtheory;
 
-/**
- * Created by daniel on 02/03/14.
- */
 public class QueuingTheory {
 
     public static final int MODEL_MM1 = 1;

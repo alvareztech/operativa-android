@@ -7,40 +7,48 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="48dp">
+        android:layout_height="56dp">
 
         <ImageView
             android:layout_width="36dp"
             android:layout_height="36dp"
+            android:background="@drawable/circle"
+            android:padding="4dp"
             android:src="@drawable/lamda" />
 
         <TextView
-            style="@style/FormText.Center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:text="@string/tasa_de_llegadas" />
 
         <EditText
             android:id="@+id/tasaLlegadasEditText"
-            style="@style/FormEditText.Left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:inputType="numberDecimal" />
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/normal_size">
+        android:layout_height="56dp">
 
         <ImageView
             android:layout_width="36dp"
             android:layout_height="36dp"
+            android:background="@drawable/circle"
+            android:padding="4dp"
             android:src="@drawable/mu" />
 
         <TextView
-            style="@style/FormText.Center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:text="@string/tasa_de_servicio" />
 
         <EditText
             android:id="@+id/tasaServicioEditText"
-            style="@style/FormEditText.Left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:inputType="numberDecimal" />
 
     </LinearLayout>
