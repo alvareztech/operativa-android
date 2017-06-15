@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="settings_decimals_entries">
+    <string-array name="settings_decimals_entries" translatable="false">
         <item>0 decimals</item>
         <item>1 decimals</item>
         <item>2 decimals</item>
@@ -8,7 +8,7 @@
         <item>4 decimals</item>
         <item>5 decimals</item>
     </string-array>
-    <string-array name="settings_decimals_entries_values">
+    <string-array name="settings_decimals_entries_values" translatable="false">
         <item>0</item>
         <item>1</item>
         <item>2</item>
