@@ -20,12 +20,12 @@
             android:src="@drawable/lamda" />
 
         <TextView
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:text="@string/tasa_de_llegadas" />
 
         <EditText
+            android:gravity="end"
             android:id="@+id/tasaLlegadasEditText"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -53,10 +53,10 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:text="@string/tasa_de_servicio" />
 
         <EditText
+            android:gravity="end"
             android:id="@+id/tasaServicioEditText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -84,15 +84,17 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:text="@string/tamano_de_la_poblacion" />
 
         <EditText
+            android:gravity="end"
             android:id="@+id/tamanoPoblacionEditText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginLeft="8dp"
             android:layout_marginRight="16dp"
+            android:layout_marginStart="8dp"
             android:layout_weight="1"
             android:inputType="number" />
 

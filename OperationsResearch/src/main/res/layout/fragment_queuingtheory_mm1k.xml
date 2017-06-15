@@ -7,11 +7,16 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/normal_size">
+        android:layout_height="56dp"
+        android:gravity="center_vertical">
 
         <ImageView
             android:layout_width="36dp"
             android:layout_height="36dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/circle"
+            android:padding="4dp"
             android:src="@drawable/lamda" />
 
         <TextView
@@ -20,6 +25,12 @@
             android:text="@string/tasa_de_llegadas" />
 
         <EditText
+            android:gravity="end"
+            android:layout_marginEnd="16dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
             android:id="@+id/tasaLlegadasEditText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -29,11 +40,16 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/normal_size">
+        android:layout_height="56dp"
+        android:gravity="center_vertical">
 
         <ImageView
             android:layout_width="36dp"
             android:layout_height="36dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/circle"
+            android:padding="4dp"
             android:src="@drawable/mu" />
 
         <TextView
@@ -42,6 +58,12 @@
             android:text="@string/tasa_de_servicio" />
 
         <EditText
+            android:gravity="end"
+            android:layout_marginEnd="16dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
             android:id="@+id/tasaServicioEditText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -51,11 +73,16 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/normal_size">
+        android:layout_height="56dp"
+        android:gravity="center_vertical">
 
         <ImageView
             android:layout_width="36dp"
             android:layout_height="36dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/circle"
+            android:padding="4dp"
             android:src="@drawable/k" />
 
         <TextView
@@ -64,6 +91,12 @@
             android:text="@string/limite_del_sistema" />
 
         <EditText
+            android:gravity="end"
+            android:layout_marginEnd="16dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
             android:id="@+id/limiteSistemaEditText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
