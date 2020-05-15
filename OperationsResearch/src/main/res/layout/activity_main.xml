@@ -9,7 +9,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <android.support.v7.widget.CardView
+        <androidx.cardview.widget.CardView
             android:id="@+id/mm1CardView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -49,9 +49,9 @@
                     android:textSize="12sp" />
             </LinearLayout>
 
-        </android.support.v7.widget.CardView>
+        </androidx.cardview.widget.CardView>
 
-        <android.support.v7.widget.CardView
+        <androidx.cardview.widget.CardView
             android:id="@+id/mmsCardView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -90,9 +90,9 @@
                     android:textSize="12sp" />
             </LinearLayout>
 
-        </android.support.v7.widget.CardView>
+        </androidx.cardview.widget.CardView>
 
-        <android.support.v7.widget.CardView
+        <androidx.cardview.widget.CardView
             android:id="@+id/mm1cCardView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -131,9 +131,9 @@
                     android:textSize="12sp" />
             </LinearLayout>
 
-        </android.support.v7.widget.CardView>
+        </androidx.cardview.widget.CardView>
 
-        <android.support.v7.widget.CardView
+        <androidx.cardview.widget.CardView
             android:id="@+id/mmscCardView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -172,9 +172,9 @@
                     android:textSize="12sp" />
             </LinearLayout>
 
-        </android.support.v7.widget.CardView>
+        </androidx.cardview.widget.CardView>
 
-        <android.support.v7.widget.CardView
+        <androidx.cardview.widget.CardView
             android:id="@+id/mm1kCardView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -214,9 +214,9 @@
                     android:textSize="12sp" />
             </LinearLayout>
 
-        </android.support.v7.widget.CardView>
+        </androidx.cardview.widget.CardView>
 
-        <android.support.v7.widget.CardView
+        <androidx.cardview.widget.CardView
             android:id="@+id/mmskCardView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -255,7 +255,7 @@
                     android:textSize="12sp" />
             </LinearLayout>
 
-        </android.support.v7.widget.CardView>
+        </androidx.cardview.widget.CardView>
 
     </LinearLayout>
 </ScrollView>
