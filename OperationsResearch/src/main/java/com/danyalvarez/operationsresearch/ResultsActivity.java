@@ -4,6 +4,7 @@ import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
+
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -14,6 +15,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
+
 import com.danyalvarez.operationsresearch.adapters.lists.ResultsListAdapter;
 import com.danyalvarez.operationsresearch.classes.ResultItem;
 import com.danyalvarez.operationsresearch.queuingtheory.QueuingTheory;
@@ -31,7 +33,7 @@ public class ResultsActivity extends AppCompatActivity implements AdapterView.On
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_results);
 
-        mList = (ListView) findViewById(android.R.id.list);
+        mList = findViewById(android.R.id.list);
         mList.setOnItemClickListener(this);
         mListAdapter = new ResultsListAdapter(this);
         mList.setAdapter(mListAdapter);

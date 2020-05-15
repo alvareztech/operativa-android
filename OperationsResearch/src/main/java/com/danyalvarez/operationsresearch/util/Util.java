@@ -7,6 +7,7 @@ import android.content.DialogInterface;
 import android.content.res.AssetManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+
 import androidx.fragment.app.FragmentActivity;
 
 import com.danyalvarez.operationsresearch.R;
@@ -26,7 +27,7 @@ public class Util {
         InputStream is;
         try {
             is = assetManager.open(nameWithExtension);
-            bitmap = BitmapFactory. decodeStream(is);
+            bitmap = BitmapFactory.decodeStream(is);
         } catch (IOException e) {
             e.printStackTrace();
         }

@@ -3,7 +3,9 @@ package com.danyalvarez.operationsresearch;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+
 import androidx.fragment.app.DialogFragment;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,9 +21,9 @@ public class CreditsFragment extends DialogFragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_credits, container, false);
 
-        mEnviarCorreoButton = (Button) rootView.findViewById(R.id.enviarCorreoButton);
-        mIrWebButton = (Button) rootView.findViewById(R.id.irWebButton);
-        mYoutubeButton = (Button) rootView.findViewById(R.id.youtubeButton);
+        mEnviarCorreoButton = rootView.findViewById(R.id.enviarCorreoButton);
+        mIrWebButton = rootView.findViewById(R.id.irWebButton);
+        mYoutubeButton = rootView.findViewById(R.id.youtubeButton);
 
         return rootView;
     }

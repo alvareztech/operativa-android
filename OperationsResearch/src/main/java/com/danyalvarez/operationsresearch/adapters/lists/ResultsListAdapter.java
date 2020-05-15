@@ -47,12 +47,12 @@ public class ResultsListAdapter extends BaseAdapter {
             convertView = mLayoutInflater.inflate(R.layout.list_item_result, null);
             viewHolder = new ViewHolder();
 
-            viewHolder.sectionViewGroup = (ViewGroup) convertView.findViewById(R.id.sectionViewGroup);
-            viewHolder.titleSectionText = (TextView) convertView.findViewById(R.id.titleSectionText);
+            viewHolder.sectionViewGroup = convertView.findViewById(R.id.sectionViewGroup);
+            viewHolder.titleSectionText = convertView.findViewById(R.id.titleSectionText);
 
-            viewHolder.iconImage = (ImageView) convertView.findViewById(R.id.iconImage);
-            viewHolder.descriptionText = (TextView) convertView.findViewById(R.id.descriptionText);
-            viewHolder.resultText = (TextView) convertView.findViewById(R.id.resultText);
+            viewHolder.iconImage = convertView.findViewById(R.id.iconImage);
+            viewHolder.descriptionText = convertView.findViewById(R.id.descriptionText);
+            viewHolder.resultText = convertView.findViewById(R.id.resultText);
 
             convertView.setTag(viewHolder);
         } else {

@@ -11,7 +11,6 @@ public class Format {
             "###,###,###,##0.000",
             "###,###,###,##0.0000",
             "###,###,###,##0.00000"
-
     };
 
     public static String number(double number, int decimalNumber) {
