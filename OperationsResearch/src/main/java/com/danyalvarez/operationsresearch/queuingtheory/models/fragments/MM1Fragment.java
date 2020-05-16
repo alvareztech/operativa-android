@@ -4,16 +4,17 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 
+import androidx.fragment.app.Fragment;
+
 import com.danyalvarez.operationsresearch.R;
 import com.danyalvarez.operationsresearch.ResultsActivity;
 import com.danyalvarez.operationsresearch.classes.ResultItem;
-import com.danyalvarez.operationsresearch.queuingtheory.QueuingTheory;
+import com.danyalvarez.operationsresearch.queuingtheory.Model;
 import com.danyalvarez.operationsresearch.queuingtheory.models.MM1Model;
 import com.danyalvarez.operationsresearch.util.Format;
 
@@ -28,8 +29,8 @@ public class MM1Fragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_queuingtheory_mm1, container, false);
 
-        mTasaLlegadasEditText = (EditText) view.findViewById(R.id.tasaLlegadasEditText);
-        mTasaServicioEditText = (EditText) view.findViewById(R.id.tasaServicioEditText);
+        mTasaLlegadasEditText = view.findViewById(R.id.tasaLlegadasEditText);
+        mTasaServicioEditText = view.findViewById(R.id.tasaServicioEditText);
 
         return view;
     }
@@ -100,7 +101,7 @@ public class MM1Fragment extends Fragment {
 
 
         Intent intent = new Intent(getActivity(), ResultsActivity.class);
-        intent.putExtra("model", QueuingTheory.MODEL_MM1);
+        intent.putExtra("model", Model.MM1.ordinal());
         intent.putParcelableArrayListExtra("data", data);
         startActivity(intent);
     }

@@ -1,8 +1,5 @@
 package com.danyalvarez.operationsresearch.queuingtheory.models;
 
-/**
- * Created by daniel on 03/03/14.
- */
 public class MM1Model {
 
     private double lamda; // lamda

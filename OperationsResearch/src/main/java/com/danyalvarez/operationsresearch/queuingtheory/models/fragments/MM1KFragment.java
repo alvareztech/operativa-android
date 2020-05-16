@@ -4,16 +4,18 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 
+import androidx.fragment.app.Fragment;
+
 import com.danyalvarez.operationsresearch.R;
 import com.danyalvarez.operationsresearch.ResultsActivity;
 import com.danyalvarez.operationsresearch.classes.ResultItem;
-import com.danyalvarez.operationsresearch.queuingtheory.QueuingTheory;
+import com.danyalvarez.operationsresearch.queuingtheory.Model;
+import com.danyalvarez.operationsresearch.queuingtheory.Result;
 import com.danyalvarez.operationsresearch.queuingtheory.models.MM1KModel;
 import com.danyalvarez.operationsresearch.util.Format;
 import com.danyalvarez.operationsresearch.util.Util;
@@ -61,9 +63,9 @@ public class MM1KFragment extends Fragment {
         int limiteSistema = Integer.parseInt(limiteSistemaStr);
 
         MM1KModel mm1k = new MM1KModel(tasaLlegadas, tasaServicio, limiteSistema);
-        int response = mm1k.calculate();
-        if (response != QueuingTheory.SUCCESSFUL_CALCULATION) {
-            if (response == QueuingTheory.ERROR_LIMIT_SYSTEM) {
+        Result response = mm1k.calculate();
+        if (response != Result.SUCCESSFUL_CALCULATION) {
+            if (response == Result.ERROR_LIMIT_SYSTEM) {
                 Util.showErrorMessage(getActivity(), R.string.error_limit_system);
             }
             return;
@@ -114,7 +116,7 @@ public class MM1KFragment extends Fragment {
 
 
         Intent intent = new Intent(getActivity(), ResultsActivity.class);
-        intent.putExtra("model", QueuingTheory.MODEL_MM1K);
+        intent.putExtra("model", Model.MM1K.ordinal());
         intent.putParcelableArrayListExtra("data", data);
         startActivity(intent);
     }

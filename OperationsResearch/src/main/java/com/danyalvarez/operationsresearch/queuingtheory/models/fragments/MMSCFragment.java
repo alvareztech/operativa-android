@@ -4,16 +4,18 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 
+import androidx.fragment.app.Fragment;
+
 import com.danyalvarez.operationsresearch.R;
 import com.danyalvarez.operationsresearch.ResultsActivity;
 import com.danyalvarez.operationsresearch.classes.ResultItem;
-import com.danyalvarez.operationsresearch.queuingtheory.QueuingTheory;
+import com.danyalvarez.operationsresearch.queuingtheory.Model;
+import com.danyalvarez.operationsresearch.queuingtheory.Result;
 import com.danyalvarez.operationsresearch.queuingtheory.models.MMSCModel;
 import com.danyalvarez.operationsresearch.util.Format;
 import com.danyalvarez.operationsresearch.util.Util;
@@ -30,10 +32,10 @@ public class MMSCFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_queuingtheory_mmsc, container, false);
-        mTasaLlegadasEditText = (EditText) view.findViewById(R.id.tasaLlegadasEditText);
-        mTasaServicioEditText = (EditText) view.findViewById(R.id.tasaServicioEditText);
-        mCanalesServicioEditText = (EditText) view.findViewById(R.id.canalesServicioEditText);
-        mTamanoPoblacionEditText = (EditText) view.findViewById(R.id.tamanoPoblacionEditText);
+        mTasaLlegadasEditText = view.findViewById(R.id.tasaLlegadasEditText);
+        mTasaServicioEditText = view.findViewById(R.id.tasaServicioEditText);
+        mCanalesServicioEditText = view.findViewById(R.id.canalesServicioEditText);
+        mTamanoPoblacionEditText = view.findViewById(R.id.tamanoPoblacionEditText);
         return view;
     }
 
@@ -63,9 +65,9 @@ public class MMSCFragment extends Fragment {
         int tamanoPoblacion = Integer.parseInt(tamanoPoblacionStr);
 
         MMSCModel mmsc = new MMSCModel(tasaLlegadas, tasaServicio, canalesServicio, tamanoPoblacion);
-        int response = mmsc.calculate();
-        if (response != QueuingTheory.SUCCESSFUL_CALCULATION) {
-            if (response == QueuingTheory.ERROR_POPULATION_SIZE) {
+        Result response = mmsc.calculate();
+        if (response != Result.SUCCESSFUL_CALCULATION) {
+            if (response == Result.ERROR_POPULATION_SIZE) {
                 Util.showErrorMessage(getActivity(), R.string.error_population_size);
             }
             return;
@@ -116,9 +118,8 @@ public class MMSCFragment extends Fragment {
 
 
         Intent intent = new Intent(getActivity(), ResultsActivity.class);
-        intent.putExtra("model", QueuingTheory.MODEL_MMSC);
+        intent.putExtra("model", Model.MMSC.ordinal());
         intent.putParcelableArrayListExtra("data", data);
         startActivity(intent);
     }
-
 }

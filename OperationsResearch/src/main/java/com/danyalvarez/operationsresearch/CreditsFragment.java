@@ -3,13 +3,12 @@ package com.danyalvarez.operationsresearch;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-
-import androidx.fragment.app.DialogFragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+
+import androidx.fragment.app.DialogFragment;
 
 public class CreditsFragment extends DialogFragment {
 
@@ -35,7 +34,6 @@ public class CreditsFragment extends DialogFragment {
         mEnviarCorreoButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 Intent intentCorreo = new Intent(Intent.ACTION_SEND);
                 intentCorreo.setType("text/plain");
                 intentCorreo.putExtra(Intent.EXTRA_EMAIL, new String[]{"daniel@alvarez.tech"});

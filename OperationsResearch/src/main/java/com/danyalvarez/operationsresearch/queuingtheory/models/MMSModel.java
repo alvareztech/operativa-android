@@ -1,11 +1,8 @@
 package com.danyalvarez.operationsresearch.queuingtheory.models;
 
-import com.danyalvarez.operationsresearch.queuingtheory.QueuingTheory;
+import com.danyalvarez.operationsresearch.queuingtheory.Result;
 import com.danyalvarez.operationsresearch.util.C;
 
-/**
- * Created by daniel on 03/03/14.
- */
 public class MMSModel {
 
     private double lamda;
@@ -32,7 +29,7 @@ public class MMSModel {
         this.Pn = new double[8];
     }
 
-    public int calculate() {
+    public Result calculate() {
         if (S < C.fact.length) {
 
             rho = lamda / (mu * S);
@@ -51,9 +48,9 @@ public class MMSModel {
 
             W = L / lamda;
             Wq = Lq / lamda;
-            return QueuingTheory.SUCCESSFUL_CALCULATION;
+            return Result.SUCCESSFUL_CALCULATION;
         } else {
-            return QueuingTheory.ERROR_SERVICE_CHANNELS;
+            return Result.ERROR_SERVICE_CHANNELS;
         }
     }
 
@@ -69,7 +66,7 @@ public class MMSModel {
         double d = 0;
         if ((i > 0) && (i < S)) {
             d = Pn[0] * Math.pow(lamda / mu, i) / C.fact[i];
-        } else if (i >= S){
+        } else if (i >= S) {
             d = Pn[0] * Math.pow(lamda / mu, i) / (C.fact[S] * Math.pow(S, i - S));
         }
         return d;

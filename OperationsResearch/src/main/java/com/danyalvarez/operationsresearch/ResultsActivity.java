@@ -4,10 +4,6 @@ import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
-
-import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -16,9 +12,12 @@ import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
 
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.danyalvarez.operationsresearch.adapters.lists.ResultsListAdapter;
 import com.danyalvarez.operationsresearch.classes.ResultItem;
-import com.danyalvarez.operationsresearch.queuingtheory.QueuingTheory;
+import com.danyalvarez.operationsresearch.queuingtheory.Model;
 
 import java.util.ArrayList;
 
@@ -38,7 +37,6 @@ public class ResultsActivity extends AppCompatActivity implements AdapterView.On
         mListAdapter = new ResultsListAdapter(this);
         mList.setAdapter(mListAdapter);
 
-
         configActionBar();
 
         addItems();
@@ -52,30 +50,8 @@ public class ResultsActivity extends AppCompatActivity implements AdapterView.On
 
         actionBar.setDisplayUseLogoEnabled(false);
 
-        int model = getIntent().getIntExtra("model", 0);
-        String title = "";
-        switch (model) {
-            case QueuingTheory.MODEL_MM1:
-                title = "M/M/1";
-                break;
-            case QueuingTheory.MODEL_MMS:
-                title = "M/M/S";
-                break;
-            case QueuingTheory.MODEL_MM1C:
-                title = "M/M/1/C";
-                break;
-            case QueuingTheory.MODEL_MMSC:
-                title = "M/M/S/C";
-                break;
-            case QueuingTheory.MODEL_MM1K:
-                title = "M/M/1/K";
-                break;
-            case QueuingTheory.MODEL_MMSK:
-                title = "M/M/S/K";
-                break;
-        }
-
-        actionBar.setSubtitle(title);
+        Model model = Model.values()[getIntent().getIntExtra("model", 0)];
+        actionBar.setSubtitle(model.getTitle());
         actionBar.setTitle(R.string.results);
     }
 

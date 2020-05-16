@@ -1,11 +1,8 @@
 package com.danyalvarez.operationsresearch.queuingtheory.models;
 
-import com.danyalvarez.operationsresearch.queuingtheory.QueuingTheory;
+import com.danyalvarez.operationsresearch.queuingtheory.Result;
 import com.danyalvarez.operationsresearch.util.C;
 
-/**
- * Created by daniel on 03/03/14.
- */
 public class MMSCModel {
 
     private double lamda;
@@ -32,7 +29,7 @@ public class MMSCModel {
         this.Pn = new double[8];
     }
 
-    public int calculate() {
+    public Result calculate() {
         if (m < C.fact.length) {
             rho = lamda / (mu * S);
 
@@ -47,9 +44,9 @@ public class MMSCModel {
             for (int i = 1; i < Pn.length; i++) {
                 Pn[i] = Pn(i);
             }
-            return  QueuingTheory.SUCCESSFUL_CALCULATION;
+            return Result.SUCCESSFUL_CALCULATION;
         } else {
-            return QueuingTheory.ERROR_POPULATION_SIZE;
+            return Result.ERROR_POPULATION_SIZE;
         }
     }
 

@@ -13,10 +13,10 @@
             android:id="@+id/mm1CardView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="4dp"
             android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
             android:layout_marginTop="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="4dp"
             android:clickable="true"
             android:foreground="?android:attr/selectableItemBackground"
             android:onClick="open">
@@ -28,7 +28,6 @@
                 android:padding="16dp">
 
                 <TextView
-
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="monospace"
@@ -55,10 +54,10 @@
             android:id="@+id/mmsCardView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="4dp"
             android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
             android:layout_marginTop="4dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="4dp"
             android:clickable="true"
             android:foreground="?android:attr/selectableItemBackground"
             android:onClick="open">
@@ -96,10 +95,10 @@
             android:id="@+id/mm1cCardView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="4dp"
             android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
             android:layout_marginTop="4dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="4dp"
             android:clickable="true"
             android:foreground="?android:attr/selectableItemBackground"
             android:onClick="open">
@@ -137,10 +136,10 @@
             android:id="@+id/mmscCardView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="4dp"
             android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
             android:layout_marginTop="4dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="4dp"
             android:clickable="true"
             android:foreground="?android:attr/selectableItemBackground"
             android:onClick="open">
@@ -178,10 +177,10 @@
             android:id="@+id/mm1kCardView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="4dp"
             android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
             android:layout_marginTop="4dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="4dp"
             android:clickable="true"
             android:foreground="?android:attr/selectableItemBackground"
             android:onClick="open">
@@ -220,10 +219,10 @@
             android:id="@+id/mmskCardView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
             android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
             android:layout_marginTop="4dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
             android:clickable="true"
             android:foreground="?android:attr/selectableItemBackground"
             android:onClick="open">

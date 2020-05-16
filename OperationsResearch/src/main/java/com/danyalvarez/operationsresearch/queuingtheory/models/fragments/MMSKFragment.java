@@ -4,16 +4,18 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 
+import androidx.fragment.app.Fragment;
+
 import com.danyalvarez.operationsresearch.R;
 import com.danyalvarez.operationsresearch.ResultsActivity;
 import com.danyalvarez.operationsresearch.classes.ResultItem;
-import com.danyalvarez.operationsresearch.queuingtheory.QueuingTheory;
+import com.danyalvarez.operationsresearch.queuingtheory.Model;
+import com.danyalvarez.operationsresearch.queuingtheory.Result;
 import com.danyalvarez.operationsresearch.queuingtheory.models.MMSKModel;
 import com.danyalvarez.operationsresearch.util.Format;
 import com.danyalvarez.operationsresearch.util.Util;
@@ -31,10 +33,10 @@ public class MMSKFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_queuingtheory_mmsk, container, false);
 
-        mTasaLlegadasEditText = (EditText) view.findViewById(R.id.tasaLlegadasEditText);
-        mTasaServicioEditText = (EditText) view.findViewById(R.id.tasaServicioEditText);
-        mCanalesServicioEditText = (EditText) view.findViewById(R.id.canalesServicioEditText);
-        mLimiteSistemaEditText = (EditText) view.findViewById(R.id.limiteSistemaEditText);
+        mTasaLlegadasEditText = view.findViewById(R.id.tasaLlegadasEditText);
+        mTasaServicioEditText = view.findViewById(R.id.tasaServicioEditText);
+        mCanalesServicioEditText = view.findViewById(R.id.canalesServicioEditText);
+        mLimiteSistemaEditText = view.findViewById(R.id.limiteSistemaEditText);
 
         return view;
     }
@@ -65,9 +67,9 @@ public class MMSKFragment extends Fragment {
         int limiteSistema = Integer.parseInt(limiteSistemaStr);
 
         MMSKModel mmsk = new MMSKModel(tasaLlegadas, tasaServicio, canalesServicio, limiteSistema);
-        int response = mmsk.calculate();
-        if (response != QueuingTheory.SUCCESSFUL_CALCULATION) {
-            if (response == QueuingTheory.ERROR_SERVICE_CHANNELS) {
+        Result response = mmsk.calculate();
+        if (response != Result.SUCCESSFUL_CALCULATION) {
+            if (response == Result.ERROR_SERVICE_CHANNELS) {
                 Util.showErrorMessage(getActivity(), R.string.error_service_channels);
             }
             return;
@@ -119,7 +121,7 @@ public class MMSKFragment extends Fragment {
 
 
         Intent intent = new Intent(getActivity(), ResultsActivity.class);
-        intent.putExtra("model", QueuingTheory.MODEL_MMSK);
+        intent.putExtra("model", Model.MMSK.ordinal());
         intent.putParcelableArrayListExtra("data", data);
         startActivity(intent);
     }

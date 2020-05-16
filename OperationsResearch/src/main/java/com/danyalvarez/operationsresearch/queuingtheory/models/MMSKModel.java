@@ -1,11 +1,8 @@
 package com.danyalvarez.operationsresearch.queuingtheory.models;
 
-import com.danyalvarez.operationsresearch.queuingtheory.QueuingTheory;
+import com.danyalvarez.operationsresearch.queuingtheory.Result;
 import com.danyalvarez.operationsresearch.util.C;
 
-/**
- * Created by daniel on 03/03/14.
- */
 public class MMSKModel {
 
     private double lamda;
@@ -33,7 +30,7 @@ public class MMSKModel {
         this.Pn = new double[8];
     }
 
-    public int calculate() {
+    public Result calculate() {
         if (S < C.fact.length) {
             rho = lamda / (mu * S);
 
@@ -50,9 +47,9 @@ public class MMSKModel {
 //
 //        W = L / lamdax;
 //        Wq = W - 1.0D / mu;
-            return QueuingTheory.SUCCESSFUL_CALCULATION;
+            return Result.SUCCESSFUL_CALCULATION;
         } else {
-            return QueuingTheory.ERROR_SERVICE_CHANNELS;
+            return Result.ERROR_SERVICE_CHANNELS;
         }
     }
 

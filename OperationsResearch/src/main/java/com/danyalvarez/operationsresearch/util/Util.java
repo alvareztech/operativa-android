@@ -15,11 +15,7 @@ import com.danyalvarez.operationsresearch.R;
 import java.io.IOException;
 import java.io.InputStream;
 
-/**
- * Created by daniel on 22/02/14.
- */
 public class Util {
-
 
     public static Bitmap getBitmapFromAsset(Context context, String nameWithExtension) {
         Bitmap bitmap = null;

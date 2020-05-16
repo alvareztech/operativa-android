@@ -4,16 +4,18 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 
+import androidx.fragment.app.Fragment;
+
 import com.danyalvarez.operationsresearch.R;
 import com.danyalvarez.operationsresearch.ResultsActivity;
 import com.danyalvarez.operationsresearch.classes.ResultItem;
-import com.danyalvarez.operationsresearch.queuingtheory.QueuingTheory;
+import com.danyalvarez.operationsresearch.queuingtheory.Model;
+import com.danyalvarez.operationsresearch.queuingtheory.Result;
 import com.danyalvarez.operationsresearch.queuingtheory.models.MM1CModel;
 import com.danyalvarez.operationsresearch.util.Format;
 import com.danyalvarez.operationsresearch.util.Util;
@@ -30,9 +32,9 @@ public class MM1CFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_queuingtheory_mm1c, container, false);
 
-        mTasaLlegadasEditText = (EditText) view.findViewById(R.id.tasaLlegadasEditText);
-        mTasaServicioEditText = (EditText) view.findViewById(R.id.tasaServicioEditText);
-        mTamanoPoblacionEditText = (EditText) view.findViewById(R.id.tamanoPoblacionEditText);
+        mTasaLlegadasEditText = view.findViewById(R.id.tasaLlegadasEditText);
+        mTasaServicioEditText = view.findViewById(R.id.tasaServicioEditText);
+        mTamanoPoblacionEditText = view.findViewById(R.id.tamanoPoblacionEditText);
 
         return view;
     }
@@ -59,9 +61,9 @@ public class MM1CFragment extends Fragment {
         int tamanoPoblacion = Integer.parseInt(tamanoPoblacionStr);
 
         MM1CModel mm1c = new MM1CModel(tasaLlegadas, tasaServicio, tamanoPoblacion);
-        int response = mm1c.calculate();
-        if (response != QueuingTheory.SUCCESSFUL_CALCULATION) {
-            if (response == QueuingTheory.ERROR_POPULATION_SIZE) {
+        Result response = mm1c.calculate();
+        if (response != Result.SUCCESSFUL_CALCULATION) {
+            if (response == Result.ERROR_POPULATION_SIZE) {
                 Util.showErrorMessage(getActivity(), R.string.error_population_size);
             }
             return;
@@ -111,7 +113,7 @@ public class MM1CFragment extends Fragment {
 
 
         Intent intent = new Intent(getActivity(), ResultsActivity.class);
-        intent.putExtra("model", QueuingTheory.MODEL_MM1C);
+        intent.putExtra("model", Model.MM1C.ordinal());
         intent.putParcelableArrayListExtra("data", data);
         startActivity(intent);
     }
