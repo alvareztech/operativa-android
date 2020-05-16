@@ -1,4 +1,5 @@
 # Operations Research for Android
+![Android CI](https://github.com/alvareztech/OperationsResearch-Android/workflows/Android%20CI/badge.svg)
 
 "Operativa" is a small utility project for operational research. Write to add new options.\n\nYou can create this and more applications by accessing our page and our YouTube channel, we have tutorials, courses and more.
 
