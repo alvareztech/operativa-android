@@ -14,6 +14,7 @@ import com.danyalvarez.operationsresearch.queuingtheory.models.fragments.MM1KFra
 import com.danyalvarez.operationsresearch.queuingtheory.models.fragments.MMSCFragment;
 import com.danyalvarez.operationsresearch.queuingtheory.models.fragments.MMSFragment;
 import com.danyalvarez.operationsresearch.queuingtheory.models.fragments.MMSKFragment;
+import com.danyalvarez.operationsresearch.util.Analytics;
 
 public class InputModelActivity extends AppCompatActivity {
 
@@ -25,6 +26,8 @@ public class InputModelActivity extends AppCompatActivity {
         setContentView(R.layout.activity_input_model);
 
         mModel = Model.values()[getIntent().getIntExtra("model", 0)];
+
+        Analytics.reportModel(mModel.name(), this);
 
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction().add(R.id.container, mModel.getFragment()).commit();
