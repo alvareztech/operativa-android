@@ -22,6 +22,6 @@ public class Analytics {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.ENGLISH);
         bundle.putString("pressTime", sdf.format(new Date()));
 
-        instance.onEvent("Model", bundle);
+        instance.onEvent("ModelQueuingTheory", bundle);
     }
 }
